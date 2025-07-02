@@ -141,8 +141,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # OpenAI API Key
-# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-# HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+HUGGINGFACE_TOKEN = os.getenv("HUGGINGFACE_TOKEN")
 
 
 # Crispy Forms
