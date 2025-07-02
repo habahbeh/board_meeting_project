@@ -1,0 +1,28 @@
+<!-- templates/audio_processing/upload_meeting.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">{% trans "رفع اجتماع جديد" %}</h5>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div class="alert alert-info">
+                <h6>{% trans "ملاحظات هامة:" %}</h6>
+                <ul>
+                    <li>{% trans "الصيغ المدعومة: MP3, WAV, M4A" %}</li>
+                    <li>{% trans "الحد الأقصى للمدة: 3 ساعات" %}</li>
+                    <li>{% trans "جودة التسجيل تؤثر على دقة النسخ" %}</li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-primary">{% trans "رفع وبدء المعالجة" %}</button>
+            <a href="{% url 'core:dashboard' %}" class="btn btn-secondary">{% trans "إلغاء" %}</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

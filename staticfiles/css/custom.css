@@ -1,0 +1,81 @@
+/* static/css/custom.css */
+
+/* تصميم عام */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ألوان العلامات */
+.badge-decision {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-task {
+    background-color: #007bff;
+    color: white;
+}
+
+.badge-personal {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* تصميم مشغل الصوت */
+.audio-player {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* تمييز المتحدثين بألوان مختلفة */
+.speaker-1 {
+    border-right: 4px solid #007bff;
+}
+
+.speaker-2 {
+    border-right: 4px solid #28a745;
+}
+
+.speaker-3 {
+    border-right: 4px solid #fd7e14;
+}
+
+.speaker-4 {
+    border-right: 4px solid #6f42c1;
+}
+
+.speaker-unknown {
+    border-right: 4px solid #6c757d;
+}
+
+/* تصميم لوحة التحكم */
+.stat-card {
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* تصميم محرر النصوص */
+.transcript-editor {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.transcript-editor textarea {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* لوحة تقدم المعالجة */
+.progress {
+    height: 25px;
+}

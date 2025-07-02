@@ -1,0 +1,37 @@
+# locale/en/LC_MESSAGES/django.po
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Board Meeting Transcription System\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-01 12:00+0300\n"
+"PO-Revision-Date: 2025-07-01 12:00+0300\n"
+"Last-Translator: Your Name <your.email@example.com>\n"
+"Language-Team: English <en@example.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: core/models.py:8
+msgid "المسمى الوظيفي"
+msgstr "Job Title"
+
+#: core/models.py:9
+msgid "القسم/الإدارة"
+msgstr "Department"
+
+#: core/models.py:10
+msgid "رقم الهاتف"
+msgstr "Phone Number"
+
+#: core/models.py:13
+msgid "الملف الشخصي"
+msgstr "Profile"
+
+#: core/models.py:14
+msgid "الملفات الشخصية"
+msgstr "Profiles"
+
+# ... المزيد من الترجمات

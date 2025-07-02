@@ -1,0 +1,73 @@
+INFO 2025-07-02 01:31:10,252 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-02 01:31:10,264 basehttp "GET /ar/audio/status/5/ HTTP/1.1" 200 12607
+INFO 2025-07-02 01:31:10,337 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:15,378 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:20,388 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:25,401 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:30,411 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:35,423 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:50,439 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 44
+INFO 2025-07-02 01:31:55,453 basehttp "GET /ar/audio/check_status/5/ HTTP/1.1" 200 43
+INFO 2025-07-02 01:31:56,978 basehttp "GET /ar/audio/status/5/ HTTP/1.1" 200 6806
+INFO 2025-07-02 01:32:21,826 basehttp "GET /ar/transcription/view/5/ HTTP/1.1" 200 12226
+INFO 2025-07-02 01:32:21,892 basehttp "GET /media/meeting_audio/F_UhrO3KL.mp3 HTTP/1.1" 200 480736
+INFO 2025-07-02 13:12:23,595 basehttp "GET /ar/transcription/view/5/ HTTP/1.1" 200 12226
+INFO 2025-07-02 13:12:23,643 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-07-02 13:12:23,643 basehttp "GET /static/css/rtl.css HTTP/1.1" 304 0
+INFO 2025-07-02 13:12:23,644 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-07-02 13:12:23,691 basehttp "GET /media/meeting_audio/F_UhrO3KL.mp3 HTTP/1.1" 304 0
+INFO 2025-07-02 13:12:28,986 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14382
+INFO 2025-07-02 13:12:31,396 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14382
+INFO 2025-07-02 13:12:33,091 basehttp "GET /ar/transcription/view/5/ HTTP/1.1" 200 12226
+INFO 2025-07-02 13:12:35,773 basehttp "GET /ar/transcription/view/2/ HTTP/1.1" 200 20863
+INFO 2025-07-02 13:12:35,823 basehttp "GET /media/meeting_audio/meeting1_Ftq7fuX.mp3 HTTP/1.1" 304 0
+INFO 2025-07-02 13:12:42,609 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-02 13:12:59,699 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-02 13:12:59,712 basehttp "GET /ar/audio/status/6/ HTTP/1.1" 200 12607
+INFO 2025-07-02 13:12:59,774 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:04,815 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:09,828 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:14,839 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:19,850 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:24,863 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:39,881 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 44
+INFO 2025-07-02 13:13:45,389 basehttp "GET /ar/audio/check_status/6/ HTTP/1.1" 200 43
+INFO 2025-07-02 13:13:47,393 basehttp "GET /ar/audio/status/6/ HTTP/1.1" 200 6806
+INFO 2025-07-02 21:09:02,278 basehttp "GET /ar/transcription/view/6/ HTTP/1.1" 200 12226
+INFO 2025-07-02 21:09:02,301 basehttp "GET /static/css/rtl.css HTTP/1.1" 304 0
+INFO 2025-07-02 21:09:02,302 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-07-02 21:09:02,302 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-07-02 21:09:02,361 basehttp "GET /media/meeting_audio/F_Cmn3Eny.mp3 HTTP/1.1" 200 480736
+ERROR 2025-07-02 21:09:13,397 log Internal Server Error: /ar/transcription/report/6/
+Traceback (most recent call last):
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/transcription/views.py", line 70, in meeting_report
+    return render(request, 'transcription/meeting_report.html', context)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: transcription/meeting_report.html
+ERROR 2025-07-02 21:09:13,399 basehttp "GET /ar/transcription/report/6/ HTTP/1.1" 500 82858
+INFO 2025-07-02 21:09:16,556 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14351
+INFO 2025-07-02 21:09:20,925 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-02 21:09:35,267 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-02 21:09:35,278 basehttp "GET /ar/audio/status/7/ HTTP/1.1" 200 12607
+INFO 2025-07-02 21:09:35,339 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:09:40,376 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:09:45,389 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:09:50,402 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:09:55,412 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:10:00,425 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:10:15,439 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 44
+INFO 2025-07-02 21:10:20,450 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 200 43
+INFO 2025-07-02 21:10:21,978 basehttp "GET /ar/audio/status/7/ HTTP/1.1" 200 6806
+INFO 2025-07-02 21:10:48,083 basehttp "GET /ar/transcription/view/7/ HTTP/1.1" 200 12226
+INFO 2025-07-02 21:10:48,142 basehttp "GET /media/meeting_audio/F_nluLWBX.mp3 HTTP/1.1" 200 480736

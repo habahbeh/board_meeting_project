@@ -1,0 +1,32 @@
+<!-- templates/speaker_identification/speaker_form.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">{% if speaker %}{% trans "تعديل بيانات المتحدث" %}{% else %}{% trans "إضافة متحدث جديد" %}{% endif %}</h5>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+
+            <div class="alert alert-info">
+                <h6>{% trans "إرشادات:" %}</h6>
+                <ul>
+                    <li>{% trans "يجب أن يكون الملف الصوتي المرجعي يحتوي على صوت المتحدث فقط" %}</li>
+                    <li>{% trans "مدة الملف الصوتي المرجعي يجب أن تكون 30 ثانية على الأقل" %}</li>
+                    <li>{% trans "يفضل أن يكون الملف الصوتي خالي من الضوضاء والتداخلات" %}</li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">{% trans "حفظ" %}</button>
+                <a href="{% url 'speaker_identification:speakers' %}" class="btn btn-secondary">{% trans "إلغاء" %}</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

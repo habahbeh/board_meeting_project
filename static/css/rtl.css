@@ -1,0 +1,47 @@
+/* static/css/rtl.css */
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl .dropdown-menu {
+    text-align: right;
+}
+
+.rtl .mr-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+.rtl .ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.rtl .mr-1, .rtl .mr-2, .rtl .mr-3, .rtl .mr-4, .rtl .mr-5 {
+    margin-right: 0 !important;
+    margin-left: 0.25rem !important;
+}
+
+.rtl .text-right {
+    text-align: left !important;
+}
+
+.rtl .text-left {
+    text-align: right !important;
+}
+
+.rtl .list-group {
+    padding-right: 0;
+}
+
+.rtl .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.rtl .dropdown-toggle::after {
+    margin-right: 0.255em;
+    margin-left: 0;
+}

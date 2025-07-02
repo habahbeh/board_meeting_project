@@ -1,0 +1,304 @@
+<!-- templates/transcription/view_meeting.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+{% load transcription_filters %}
+
+{% block extra_css %}
+<style>
+    .transcript-segment {
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        border-right: 4px solid #ccc;
+    }
+
+    .speaker-info {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .segment-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .segment-time {
+        color: #6c757d;
+        font-size: 12px;
+    }
+
+    .segment-controls {
+        margin-top: 10px;
+    }
+
+    .decision-badge {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .task-badge {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .personal-badge {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .audio-player {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    /* تنسيق لكل متحدث */
+    .speaker-1 { border-right-color: #007bff; }
+    .speaker-2 { border-right-color: #28a745; }
+    .speaker-3 { border-right-color: #fd7e14; }
+    .speaker-4 { border-right-color: #6f42c1; }
+    .speaker-5 { border-right-color: #e83e8c; }
+    .speaker-unknown { border-right-color: #6c757d; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h2>{{ meeting.title }}</h2>
+        <p class="text-muted">{{ meeting.date }} | {{ meeting.created_at|date:"d/m/Y H:i" }}</p>
+        {% if meeting.description %}
+        <p>{{ meeting.description }}</p>
+        {% endif %}
+    </div>
+    <div class="col-md-4 text-right">
+        <div class="btn-group">
+            <a href="{% url 'transcription:edit_transcript' meeting.id %}" class="btn btn-outline-primary">
+                <i class="fa fa-edit"></i> {% trans "تحرير النص" %}
+            </a>
+            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                <span class="sr-only">{% trans "خيارات" %}</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="{% url 'transcription:export_transcript' meeting.id 'pdf' %}">
+                    <i class="fa fa-file-pdf"></i> {% trans "تصدير PDF" %}
+                </a>
+                <a class="dropdown-item" href="{% url 'transcription:export_transcript' meeting.id 'docx' %}">
+                    <i class="fa fa-file-word"></i> {% trans "تصدير DOCX" %}
+                </a>
+                <a class="dropdown-item" href="{% url 'transcription:export_transcript' meeting.id 'json' %}">
+                    <i class="fa fa-file-code"></i> {% trans "تصدير JSON" %}
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'transcription:meeting_report' meeting.id %}">
+                    <i class="fa fa-chart-bar"></i> {% trans "عرض التقرير" %}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- مشغل الصوت -->
+<div class="audio-player">
+    <audio id="audioPlayer" controls class="w-100">
+        <source src="{{ meeting.audio_file.url }}" type="audio/mpeg">
+        {% trans "متصفحك لا يدعم تشغيل الصوت." %}
+    </audio>
+</div>
+
+<!-- علامات التبويب -->
+<ul class="nav nav-tabs mb-4" id="transcriptTabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="transcript-tab" data-toggle="tab" href="#transcript" role="tab">
+            {% trans "النص الكامل" %}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="decisions-tab" data-toggle="tab" href="#decisions" role="tab">
+            {% trans "القرارات" %}
+            <span class="badge badge-pill badge-primary">{{ segments|dictsortby:"start_time"|regroup_by:"is_decision:True"|length }}</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="tasks-tab" data-toggle="tab" href="#tasks" role="tab">
+            {% trans "المهام" %}
+            <span class="badge badge-pill badge-primary">{{ segments|dictsortby:"start_time"|regroup_by:"is_action_item:True"|length }}</span>
+        </a>
+    </li>
+</ul>
+
+<!-- محتوى علامات التبويب -->
+<div class="tab-content" id="transcriptTabsContent">
+    <!-- النص الكامل -->
+    <div class="tab-pane fade show active" id="transcript" role="tabpanel">
+        {% if segments %}
+            {% for segment in segments %}
+                <div class="transcript-segment speaker-{% cycle '1' '2' '3' '4' '5' 'unknown' %}"
+                     data-start="{{ segment.start_time }}"
+                     data-end="{{ segment.end_time }}"
+                     id="segment-{{ segment.id }}">
+                    <div class="speaker-info">
+                        {{ segment.speaker.name|default:"غير معروف" }}
+                        <span class="segment-time">({{ segment.start_time|floatformat:2 }}s - {{ segment.end_time|floatformat:2 }}s)</span>
+
+                        {% if segment.is_decision %}
+                            <span class="badge decision-badge">{% trans "قرار" %}</span>
+                        {% endif %}
+
+                        {% if segment.is_action_item %}
+                            <span class="badge task-badge">{% trans "مهمة" %}</span>
+                        {% endif %}
+
+                        {% if segment.is_personal %}
+                            <span class="badge personal-badge">{% trans "شخصي" %}</span>
+                        {% endif %}
+                    </div>
+                    <div class="segment-text">
+                        {{ segment.text }}
+                    </div>
+                    <div class="segment-controls">
+                        <button class="btn btn-sm btn-outline-secondary play-segment" data-start="{{ segment.start_time }}">
+                            <i class="fa fa-play"></i> {% trans "تشغيل" %}
+                        </button>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">
+                {% trans "لم يتم العثور على نص منسوخ لهذا الاجتماع." %}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- القرارات -->
+    <div class="tab-pane fade" id="decisions" role="tabpanel">
+        {% with decision_segments=segments|dictsortby:"start_time"|regroup_by:"is_decision:True" %}
+            {% if decision_segments %}
+                <div class="alert alert-success">
+                    <h5>{% trans "تم استخراج" %} {{ decision_segments|length }} {% trans "قرارات من هذا الاجتماع" %}</h5>
+                </div>
+
+                {% for segment in decision_segments %}
+                    <div class="transcript-segment speaker-{% cycle '1' '2' '3' '4' '5' %}"
+                         data-start="{{ segment.start_time }}"
+                         data-end="{{ segment.end_time }}"
+                         id="decision-{{ segment.id }}">
+                        <div class="speaker-info">
+                            {{ segment.speaker.name|default:"غير معروف" }}
+                            <span class="segment-time">({{ segment.start_time|floatformat:2 }}s - {{ segment.end_time|floatformat:2 }}s)</span>
+                            <span class="badge decision-badge">{% trans "قرار" %}</span>
+                        </div>
+                        <div class="segment-text">
+                            {{ segment.text }}
+                        </div>
+                        <div class="segment-controls">
+                            <button class="btn btn-sm btn-outline-secondary play-segment" data-start="{{ segment.start_time }}">
+                                <i class="fa fa-play"></i> {% trans "تشغيل" %}
+                            </button>
+                            <a href="#segment-{{ segment.id }}" class="btn btn-sm btn-outline-info">
+                                <i class="fa fa-search"></i> {% trans "عرض في السياق" %}
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-info">
+                    {% trans "لم يتم استخراج أي قرارات من هذا الاجتماع." %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- المهام -->
+    <div class="tab-pane fade" id="tasks" role="tabpanel">
+        {% with task_segments=segments|dictsortby:"start_time"|regroup_by:"is_action_item:True" %}
+            {% if task_segments %}
+                <div class="alert alert-primary">
+                    <h5>{% trans "تم استخراج" %} {{ task_segments|length }} {% trans "مهام من هذا الاجتماع" %}</h5>
+                </div>
+
+                {% for segment in task_segments %}
+                    <div class="transcript-segment speaker-{% cycle '1' '2' '3' '4' '5' %}"
+                         data-start="{{ segment.start_time }}"
+                         data-end="{{ segment.end_time }}"
+                         id="task-{{ segment.id }}">
+                        <div class="speaker-info">
+                            {{ segment.speaker.name|default:"غير معروف" }}
+                            <span class="segment-time">({{ segment.start_time|floatformat:2 }}s - {{ segment.end_time|floatformat:2 }}s)</span>
+                            <span class="badge task-badge">{% trans "مهمة" %}</span>
+                        </div>
+                        <div class="segment-text">
+                            {{ segment.text }}
+                        </div>
+                        <div class="segment-controls">
+                            <button class="btn btn-sm btn-outline-secondary play-segment" data-start="{{ segment.start_time }}">
+                                <i class="fa fa-play"></i> {% trans "تشغيل" %}
+                            </button>
+                            <a href="#segment-{{ segment.id }}" class="btn btn-sm btn-outline-info">
+                                <i class="fa fa-search"></i> {% trans "عرض في السياق" %}
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-info">
+                    {% trans "لم يتم استخراج أي مهام من هذا الاجتماع." %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // تشغيل المقطع الصوتي عند النقر على الزر
+    $(document).ready(function() {
+        $('.play-segment').click(function() {
+            var audio = document.getElementById('audioPlayer');
+            var startTime = $(this).data('start');
+            audio.currentTime = startTime;
+            audio.play();
+        });
+    });
+
+    // تمييز المقطع النصي الحالي أثناء تشغيل الصوت
+    $(document).ready(function() {
+        var audio = document.getElementById('audioPlayer');
+        if (audio) {
+            audio.ontimeupdate = function() {
+                var currentTime = audio.currentTime;
+                $('.transcript-segment').each(function() {
+                    var start = $(this).data('start');
+                    var end = $(this).data('end');
+
+                    if (currentTime >= start && currentTime <= end) {
+                        $(this).addClass('bg-light');
+
+                        // تمرير إلى المقطع الحالي
+                        if (!$(this).hasClass('scrolled-to') && !audio.paused) {
+                            $(this).addClass('scrolled-to');
+                            $('html, body').animate({
+                                scrollTop: $(this).offset().top - 200
+                            }, 500);
+                        }
+                    } else {
+                        $(this).removeClass('bg-light scrolled-to');
+                    }
+                });
+            };
+        }
+    });
+
+    // التبديل بين علامات التبويب
+    $(document).ready(function() {
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            // التمرير إلى أعلى المحتوى عند تغيير علامة التبويب
+            window.scrollTo(0, $('#transcriptTabs').offset().top - 100);
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!-- templates/core/home.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">{% trans "نظام تحويل اجتماعات مجلس الإدارة" %}</h1>
+    <p class="lead">
+        {% trans "نظام متكامل لتحويل تسجيلات اجتماعات مجلس الإدارة إلى نصوص مع تحديد هوية المتحدثين واستخراج القرارات والمهام." %}
+    </p>
+    <hr class="my-4">
+    <p>{% trans "سجل دخولك للبدء في استخدام النظام." %}</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">{% trans "تسجيل الدخول" %}</a>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img src="{% static 'img/transcription.svg' %}" alt="{% trans 'النسخ' %}" class="img-fluid mb-3" style="max-height: 100px;">
+                <h5 class="card-title">{% trans "نسخ دقيق" %}</h5>
+                <p class="card-text">{% trans "نسخ دقيق للغة العربية والإنجليزية مع دعم المصطلحات المصرفية والمالية." %}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img src="{% static 'img/speaker.svg' %}" alt="{% trans 'تحديد المتحدثين' %}" class="img-fluid mb-3" style="max-height: 100px;">
+                <h5 class="card-title">{% trans "تحديد المتحدثين" %}</h5>
+                <p class="card-text">{% trans "تحديد هوية كل متحدث بدقة عالية جدًا مع دعم حتى 20 متحدث مختلف." %}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img src="{% static 'img/decisions.svg' %}" alt="{% trans 'استخراج القرارات' %}" class="img-fluid mb-3" style="max-height: 100px;">
+                <h5 class="card-title">{% trans "استخراج القرارات" %}</h5>
+                <p class="card-text">{% trans "استخراج تلقائي للقرارات والمهام من محتوى الاجتماع لتسهيل المتابعة." %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

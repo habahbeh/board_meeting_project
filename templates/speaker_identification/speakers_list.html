@@ -1,0 +1,45 @@
+<!-- templates/speaker_identification/speakers_list.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{% trans "قائمة المتحدثين" %}</h5>
+        <a href="{% url 'speaker_identification:add_speaker' %}" class="btn btn-sm btn-primary">{% trans "إضافة متحدث" %}</a>
+    </div>
+    <div class="card-body">
+        {% if speakers %}
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>{% trans "الاسم" %}</th>
+                        <th>{% trans "المنصب" %}</th>
+                        <th>{% trans "النوع" %}</th>
+                        <th>{% trans "الإجراءات" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for speaker in speakers %}
+                    <tr>
+                        <td>{{ speaker.name }}</td>
+                        <td>{{ speaker.position }}</td>
+                        <td>{{ speaker.get_speaker_type_display }}</td>
+                        <td>
+                            <a href="{% url 'speaker_identification:edit_speaker' speaker.id %}" class="btn btn-sm btn-info">{% trans "تعديل" %}</a>
+                            <a href="{% url 'speaker_identification:delete_speaker' speaker.id %}" class="btn btn-sm btn-danger">{% trans "حذف" %}</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            {% trans "لا يوجد متحدثين مضافين حتى الآن. يمكنك إضافة متحدث جديد من خلال الزر أعلاه." %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

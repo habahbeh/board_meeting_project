@@ -1,0 +1,164 @@
+<!-- templates/audio_processing/processing_status.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    .progress {
+        height: 25px;
+    }
+    .status-card {
+        transition: all 0.3s ease;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card status-card" id="statusCard">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{% trans "حالة معالجة الاجتماع" %}</h5>
+        <div>
+            <a href="{% url 'core:dashboard' %}" class="btn btn-sm btn-secondary">{% trans "العودة للوحة التحكم" %}</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="mb-4">
+            <h5>{{ meeting.title }}</h5>
+            <p class="text-muted">{{ meeting.date }} | {{ meeting.audio_file.name }}</p>
+        </div>
+
+        <div class="processing-status">
+            {% if meeting.processed %}
+            <div class="alert alert-success">
+                <h5><i class="fa fa-check-circle"></i> {% trans "تمت المعالجة بنجاح!" %}</h5>
+                <p>{% trans "اكتملت معالجة ملف الاجتماع. يمكنك الآن استعراض النتائج." %}</p>
+                <a href="{% url 'transcription:view_meeting' meeting.id %}" class="btn btn-primary">{% trans "عرض النتائج" %}</a>
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                <h5><i class="fa fa-spinner fa-spin"></i> {% trans "جاري المعالجة..." %}</h5>
+                <p>{% trans "يتم الآن معالجة ملف الاجتماع. قد تستغرق هذه العملية بعض الوقت حسب حجم الملف." %}</p>
+
+                <div class="progress mt-3 mb-3">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%" id="progressBar"></div>
+                </div>
+
+                <div class="text-center" id="statusText">{% trans "بدء المعالجة..." %}</div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h6 class="mb-0">{% trans "مراحل المعالجة" %}</h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="step1">
+                        <i class="fa fa-circle text-muted"></i> {% trans "تحويل وتحسين جودة الصوت" %}
+                    </li>
+                    <li class="list-group-item" id="step2">
+                        <i class="fa fa-circle text-muted"></i> {% trans "تقسيم الصوت حسب المتحدثين" %}
+                    </li>
+                    <li class="list-group-item" id="step3">
+                        <i class="fa fa-circle text-muted"></i> {% trans "تحديد هوية المتحدثين" %}
+                    </li>
+                    <li class="list-group-item" id="step4">
+                        <i class="fa fa-circle text-muted"></i> {% trans "نسخ محتوى الكلام" %}
+                    </li>
+                    <li class="list-group-item" id="step5">
+                        <i class="fa fa-circle text-muted"></i> {% trans "استخراج القرارات والمهام" %}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-4">
+                <p>{% trans "يمكنك ترك هذه الصفحة مفتوحة لمتابعة التقدم، أو العودة لاحقًا لاستعراض النتائج." %}</p>
+                <button class="btn btn-outline-primary" id="refreshBtn">{% trans "تحديث الحالة" %}</button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if not meeting.processed %}
+<script>
+    $(document).ready(function() {
+        let progress = 0;
+        let currentStep = 0;
+        const steps = ['#step1', '#step2', '#step3', '#step4', '#step5'];
+        const stepProgress = [20, 40, 60, 80, 100];
+        const stepTexts = [
+            "{% trans 'تحويل وتحسين جودة الصوت...' %}",
+            "{% trans 'تقسيم الصوت حسب المتحدثين...' %}",
+            "{% trans 'تحديد هوية المتحدثين...' %}",
+            "{% trans 'نسخ محتوى الكلام...' %}",
+            "{% trans 'استخراج القرارات والمهام...' %}"
+        ];
+
+        // تحقق من حالة المعالجة من الخادم بدلاً من المحاكاة المحلية
+        function checkProcessingStatus() {
+            $.ajax({
+                url: "{% url 'audio_processing:check_status' meeting.id %}",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    if (data.processed) {
+                        // إذا اكتملت المعالجة فعلياً في قاعدة البيانات
+                        $('#progressBar').css('width', '100%');
+                        $('#progressBar').removeClass('progress-bar-animated');
+                        $('#statusText').text("{% trans 'اكتملت المعالجة!' %}");
+
+                        // تغيير جميع الخطوات إلى حالة الاكتمال
+                        $(steps.join(', ')).find('i').removeClass('text-muted text-primary').addClass('text-success');
+
+                        // إعادة تحميل الصفحة بعد تأخير قصير
+                        setTimeout(function() {
+                            location.reload();
+                        }, 1500);
+                    } else {
+                        // استمرار في المحاكاة إذا لم تكتمل المعالجة بعد
+                        simulateProgress();
+
+                        // التحقق مرة أخرى بعد 5 ثوانٍ
+                        setTimeout(checkProcessingStatus, 5000);
+                    }
+                },
+                error: function() {
+                    // في حالة الخطأ، استمر في المحاكاة
+                    simulateProgress();
+                    setTimeout(checkProcessingStatus, 10000); // فترة أطول في حالة الخطأ
+                }
+            });
+        }
+
+        // محاكاة تقدم المعالجة (لتحسين تجربة المستخدم فقط)
+        function simulateProgress() {
+            if (progress < 95) { // نتوقف عند 95% حتى يتم التأكد من الاكتمال الفعلي
+                if (progress >= stepProgress[currentStep] && currentStep < steps.length - 1) {
+                    $(steps[currentStep]).find('i').removeClass('text-muted').addClass('text-success');
+                    currentStep++;
+                    $(steps[currentStep]).find('i').removeClass('text-muted').addClass('text-primary');
+                    $('#statusText').text(stepTexts[currentStep]);
+                }
+
+                progress += 2; // تقدم أبطأ لتجنب الوصول إلى 100% قبل الاكتمال الفعلي
+                $('#progressBar').css('width', progress + '%');
+            }
+        }
+
+        // بدء المحاكاة والتحقق من الحالة
+        $(steps[0]).find('i').removeClass('text-muted').addClass('text-primary');
+        $('#statusText').text(stepTexts[0]);
+
+        // بدء التحقق من حالة المعالجة
+        checkProcessingStatus();
+
+        // زر التحديث
+        $('#refreshBtn').click(function() {
+            location.reload();
+        });
+    });
+</script>
+{% endif %}
+{% endblock %}
+
