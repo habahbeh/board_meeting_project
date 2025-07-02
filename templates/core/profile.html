@@ -1,0 +1,97 @@
+<!-- templates/core/profile.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa fa-user-circle fa-5x text-primary mb-3"></i>
+                <h4>{{ user.get_full_name|default:user.username }}</h4>
+                <p class="text-muted">{{ user.email }}</p>
+
+                {% if user.profile %}
+                    <hr>
+                    <p><strong>{% trans "المسمى الوظيفي" %}:</strong> {{ user.profile.job_title|default:"-" }}</p>
+                    <p><strong>{% trans "القسم" %}:</strong> {{ user.profile.department|default:"-" }}</p>
+                    <p><strong>{% trans "رقم الهاتف" %}:</strong> {{ user.profile.phone|default:"-" }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">{% trans "معلومات الحساب" %}</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>{% trans "اسم المستخدم" %}:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        {{ user.username }}
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>{% trans "البريد الإلكتروني" %}:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        {{ user.email }}
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>{% trans "تاريخ الانضمام" %}:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        {{ user.date_joined|date:"d/m/Y" }}
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <strong>{% trans "آخر تسجيل دخول" %}:</strong>
+                    </div>
+                    <div class="col-md-8">
+                        {{ user.last_login|date:"d/m/Y H:i" }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">{% trans "إحصائيات النشاط" %}</h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <h3 class="text-primary">{{ user.created_meetings.count }}</h3>
+                        <p class="text-muted">{% trans "اجتماعات مرفوعة" %}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-success">{{ user.created_meetings.filter.processed.count }}</h3>
+                        <p class="text-muted">{% trans "اجتماعات معالجة" %}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-info">0</h3>
+                        <p class="text-muted">{% trans "ساعات مسجلة" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="{% url 'password_reset' %}" class="btn btn-outline-primary">
+        <i class="fa fa-key"></i> {% trans "تغيير كلمة المرور" %}
+    </a>
+</div>
+{% endblock %}

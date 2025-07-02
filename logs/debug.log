@@ -71,3 +71,37 @@ INFO 2025-07-02 21:10:20,450 basehttp "GET /ar/audio/check_status/7/ HTTP/1.1" 2
 INFO 2025-07-02 21:10:21,978 basehttp "GET /ar/audio/status/7/ HTTP/1.1" 200 6806
 INFO 2025-07-02 21:10:48,083 basehttp "GET /ar/transcription/view/7/ HTTP/1.1" 200 12226
 INFO 2025-07-02 21:10:48,142 basehttp "GET /media/meeting_audio/F_nluLWBX.mp3 HTTP/1.1" 200 480736
+INFO 2025-07-02 23:32:29,186 autoreload Watching for file changes with StatReloader
+INFO 2025-07-02 23:33:07,712 basehttp "GET / HTTP/1.1" 302 0
+INFO 2025-07-02 23:33:07,731 basehttp "GET /ar/ HTTP/1.1" 302 0
+INFO 2025-07-02 23:33:07,774 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14351
+INFO 2025-07-02 23:33:07,855 basehttp "GET /static/css/custom.css HTTP/1.1" 200 1401
+INFO 2025-07-02 23:33:07,857 basehttp "GET /static/js/custom.js HTTP/1.1" 200 1626
+INFO 2025-07-02 23:33:07,857 basehttp "GET /static/css/rtl.css HTTP/1.1" 200 743
+INFO 2025-07-02 23:33:12,966 basehttp "GET /ar/profile/ HTTP/1.1" 200 8534
+INFO 2025-07-02 23:33:23,652 basehttp "GET /ar/transcription/view/7/ HTTP/1.1" 200 12226
+INFO 2025-07-02 23:33:23,728 basehttp "GET /media/meeting_audio/F_nluLWBX.mp3 HTTP/1.1" 200 480736
+INFO 2025-07-02 23:33:28,480 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-02 23:33:42,719 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-02 23:33:42,734 basehttp "GET /ar/audio/status/8/ HTTP/1.1" 200 12607
+INFO 2025-07-02 23:33:42,809 basehttp "GET /ar/audio/check_status/8/ HTTP/1.1" 200 44
+INFO 2025-07-02 23:33:47,842 basehttp "GET /ar/audio/check_status/8/ HTTP/1.1" 200 44
+INFO 2025-07-02 23:33:52,849 basehttp "GET /ar/audio/check_status/8/ HTTP/1.1" 200 44
+INFO 2025-07-02 23:33:57,858 basehttp "GET /ar/audio/check_status/8/ HTTP/1.1" 200 44
+INFO 2025-07-02 23:34:02,977 basehttp "GET /ar/audio/check_status/8/ HTTP/1.1" 200 44
+INFO 2025-07-02 23:34:08,023 basehttp "GET /ar/audio/check_status/8/ HTTP/1.1" 200 43
+INFO 2025-07-02 23:34:10,032 basehttp "GET /ar/audio/status/8/ HTTP/1.1" 200 6806
+INFO 2025-07-02 23:34:14,581 basehttp "GET /ar/transcription/view/8/ HTTP/1.1" 200 13050
+INFO 2025-07-02 23:34:14,633 basehttp "GET /media/meeting_audio/F_RgLWXMv.mp3 HTTP/1.1" 200 480736
+INFO 2025-07-02 23:34:42,604 basehttp "GET /media/meeting_audio/F_RgLWXMv.mp3 HTTP/1.1" 304 0
+WARNING 2025-07-02 23:34:42,612 log Not Found: /favicon.ico
+WARNING 2025-07-02 23:34:42,613 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-02 23:34:57,535 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-02 23:35:11,259 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-02 23:35:11,292 basehttp "GET /ar/audio/status/9/ HTTP/1.1" 200 12615
+INFO 2025-07-02 23:35:11,353 basehttp "GET /ar/audio/check_status/9/ HTTP/1.1" 200 45
+INFO 2025-07-02 23:35:16,497 basehttp "GET /ar/audio/check_status/9/ HTTP/1.1" 200 45
+INFO 2025-07-02 23:35:21,508 basehttp "GET /ar/audio/check_status/9/ HTTP/1.1" 200 44
+INFO 2025-07-02 23:35:23,031 basehttp "GET /ar/audio/status/9/ HTTP/1.1" 200 6814
+INFO 2025-07-02 23:35:26,422 basehttp "GET /ar/transcription/view/9/ HTTP/1.1" 200 13060
+INFO 2025-07-02 23:35:41,490 basehttp - Broken pipe from ('127.0.0.1', 51793)
