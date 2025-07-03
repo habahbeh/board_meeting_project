@@ -160,7 +160,7 @@ LOGOUT_REDIRECT_URL = 'login'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-TESTING_MODE = False
+
 
 
 # إعداد سجلات التصحيح
@@ -213,4 +213,6 @@ LOGGING = {
     },
 }
 
-SIMULATION_DELAY = 30  # يمكن تعديله حسب الرغبة
+TESTING_MODE = False
+# تقليل وقت المحاكاة إلى 5 ثوانٍ
+SIMULATION_DELAY = 5  # يمكن تعديله حسب الرغبة

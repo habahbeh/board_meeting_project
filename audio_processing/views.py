@@ -10,7 +10,9 @@ from .tasks import process_meeting_task
 from django.http import JsonResponse
 from django.conf import settings
 import threading
-
+from django.http import JsonResponse
+import openai
+import os
 
 @login_required
 def upload_meeting(request):
@@ -89,3 +91,49 @@ def check_processing_status(request, meeting_id):
         'id': meeting.id,
         'title': meeting.title,
     })
+
+
+@login_required
+def debug_openai(request):
+    """
+    صفحة تشخيص مشاكل OpenAI
+    """
+    debug_info = {
+        'settings': {
+            'TESTING_MODE': getattr(settings, 'TESTING_MODE', None),
+            'OPENAI_API_KEY_exists': bool(getattr(settings, 'OPENAI_API_KEY', None)),
+            'OPENAI_API_KEY_preview': settings.OPENAI_API_KEY[:10] + '...' if settings.OPENAI_API_KEY else 'NOT SET',
+        },
+        'tests': {}
+    }
+
+    # اختبار GPT
+    try:
+        openai.api_key = settings.OPENAI_API_KEY
+        response = openai.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": "test"}],
+            max_tokens=10
+        )
+        debug_info['tests']['gpt'] = "✓ يعمل"
+    except Exception as e:
+        debug_info['tests']['gpt'] = f"❌ خطأ: {str(e)}"
+
+    # اختبار وجود ملفات صوتية
+    media_path = os.path.join(settings.MEDIA_ROOT, 'meeting_audio')
+    if os.path.exists(media_path):
+        audio_files = [f for f in os.listdir(media_path) if f.endswith(('.mp3', '.wav'))]
+        debug_info['audio_files'] = audio_files[:5]  # أول 5 ملفات
+    else:
+        debug_info['audio_files'] = []
+
+    # قراءة آخر الأخطاء من السجل
+    log_file = os.path.join(settings.LOGS_DIR, 'debug.log')
+    if os.path.exists(log_file):
+        with open(log_file, 'r') as f:
+            lines = f.readlines()
+            # آخر 20 سطر يحتوي على ERROR
+            errors = [line.strip() for line in lines if 'ERROR' in line][-20:]
+            debug_info['recent_errors'] = errors
+
+    return JsonResponse(debug_info, json_dumps_params={'ensure_ascii': False, 'indent': 2})

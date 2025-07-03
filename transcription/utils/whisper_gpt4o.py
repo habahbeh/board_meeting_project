@@ -3,127 +3,280 @@
 import os
 import openai
 from django.conf import settings
+import logging
+
+logger = logging.getLogger(__name__)
+
+# تكوين مكتبة OpenAI - للإصدار 0.28.0
+if hasattr(settings, 'OPENAI_API_KEY') and settings.OPENAI_API_KEY:
+    openai.api_key = settings.OPENAI_API_KEY
+    print(f"OpenAI API Key configured: {openai.api_key[:10]}...")
+else:
+    raise Exception("OPENAI_API_KEY not found in settings!")
 
 
 def transcribe_with_whisper(audio_file_path, language="ar"):
     """
     نسخ الصوت باستخدام Whisper من OpenAI
     """
-    try:
-        client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
+    print(f"Starting Whisper transcription for: {audio_file_path}")
 
+    # التأكد من وجود الملف
+    if not os.path.exists(audio_file_path):
+        raise FileNotFoundError(f"Audio file not found: {audio_file_path}")
+
+    try:
+        # استخدام Whisper API - الإصدار القديم
         with open(audio_file_path, "rb") as audio_file:
-            transcription = client.audio.transcriptions.create(
+            response = openai.Audio.transcribe(
                 model="whisper-1",
                 file=audio_file,
-                language=language,
-                response_format="text"
+                language=language
             )
 
-        return transcription
+        print(f"Whisper transcription successful!")
+        print(f"Transcribed text: {response['text'][:100]}...")
+
+        # تقسيم النص إلى مقاطع
+        text = response['text']
+        sentences = text.split('.')
+        segments = []
+        current_time = 0
+
+        for sentence in sentences:
+            if sentence.strip():
+                # حساب وقت تقريبي بناءً على طول الجملة
+                words_count = len(sentence.split())
+                segment_duration = max(5, words_count * 0.5)  # نصف ثانية لكل كلمة
+
+                segments.append({
+                    'start': current_time,
+                    'end': current_time + segment_duration,
+                    'text': sentence.strip() + '.'
+                })
+                current_time += segment_duration
+
+        return {'text': text, 'segments': segments}
+
     except Exception as e:
-        print(f"Error with Whisper API: {str(e)}")
-        # استرجاع نص افتراضي في حالة الخطأ للاختبار فقط
-        return "هذا نص افتراضي لفحص النظام في حالة فشل الاتصال بـ Whisper API."
+        logger.error(f"CRITICAL Whisper API Error: {str(e)}")
+        raise Exception(f"Whisper API failed: {str(e)}")
 
 
-def enhance_transcript_with_gpt(transcript_text, domain="banking"):
+def identify_speaker_from_text(text):
     """
-    تحسين النص المنسوخ باستخدام GPT
-    استخدام GPT-4o إذا كان متاحاً، وإلا استخدام GPT-3.5-turbo
+    تحديد المتحدث من النص بناءً على الأنماط الشائعة
     """
+    # قائمة بالأنماط الشائعة لتعريف المتحدث
+    speaker_patterns = [
+        # الأنماط العربية
+        ('أنا', 'after'),  # "أنا د. أحمد"
+        ('معكم', 'after'),  # "معكم د. أحمد"
+        ('يتحدث', 'before'),  # "د. أحمد يتحدث"
+        ('دكتور', 'with'),  # "دكتور أحمد"
+        ('المهندس', 'with'),
+        ('الأستاذ', 'with'),
+        ('السيد', 'with'),
+        ('السيدة', 'with'),
+        ('المدير', 'with'),
+
+        # البحث عن الأسماء بعد العبارات الشائعة
+        ('شكراً', 'speaker_change'),
+        ('السلام عليكم', 'speaker_change'),
+        ('أعطي الكلمة', 'speaker_change'),
+    ]
+
+    text_lower = text.lower()
+
+    for pattern, position in speaker_patterns:
+        if pattern in text_lower:
+            words = text.split()
+
+            for i, word in enumerate(words):
+                if word.lower() == pattern:
+                    if position == 'after' and i + 1 < len(words):
+                        # الاسم يأتي بعد النمط
+                        potential_name = []
+                        for j in range(i + 1, min(i + 4, len(words))):
+                            potential_name.append(words[j])
+                            if words[j].endswith('.') or words[j].endswith(','):
+                                break
+                        return ' '.join(potential_name).strip('.,،')
+
+                    elif position == 'with' and i + 1 < len(words):
+                        # النمط جزء من الاسم
+                        return ' '.join([words[i], words[i + 1]]).strip('.,،')
+
+    return None
+
+
+def enhance_transcript_with_gpt(transcript_data, domain="banking"):
+    """
+    تحسين النص المنسوخ مع تحديد المتحدثين باستخدام GPT
+    """
+    print("Enhancing transcript with speaker identification...")
+
     try:
-        client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
+        if isinstance(transcript_data, dict):
+            segments = transcript_data.get('segments', [])
+            full_text = transcript_data.get('text', '')
+        else:
+            segments = []
+            full_text = transcript_data
 
-        system_prompt = """أنت مساعد متخصص في تحسين نصوص اجتماعات مجالس الإدارة المصرفية. 
-        قم بتصحيح الأخطاء وتحسين النص مع الحفاظ على المصطلحات المصرفية الدقيقة. 
-        حافظ على المعنى الأصلي واضبط الأخطاء اللغوية والإملائية."""
-
-        if domain == "banking":
-            system_prompt += """ كن دقيقًا جدًا مع المصطلحات المصرفية والمالية مثل:
-            - معدلات الفائدة والعائد
-            - نسب كفاية رأس المال
-            - السيولة والملاءة المالية
-            - الأصول والخصوم
-            - التعثر والديون المتعثرة
-            - القروض والتسهيلات
-            """
-
-        # محاولة استخدام GPT-4o، وإذا فشل، استخدام GPT-3.5-turbo
+        # محاولة استخدام GPT لتحديد المتحدثين
         try:
-            model_to_use = "gpt-4o"
-            enhanced_transcript = client.chat.completions.create(
-                model=model_to_use,
+            # استخدام ChatGPT لتحليل النص
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"قم بتحسين وتصحيح نص الاجتماع التالي: {transcript_text}"}
-                ]
-            )
-        except Exception as model_error:
-            print(f"Error with GPT-4o, falling back to GPT-3.5: {str(model_error)}")
-            model_to_use = "gpt-3.5-turbo"
-            enhanced_transcript = client.chat.completions.create(
-                model=model_to_use,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"قم بتحسين وتصحيح نص الاجتماع التالي: {transcript_text}"}
-                ]
+                    {
+                        "role": "system",
+                        "content": """أنت مساعد متخصص في تحليل محاضر الاجتماعات.
+                        مهمتك: تحديد المتحدثين في النص.
+                        ابحث عن:
+                        1. عبارات التعريف بالنفس (أنا فلان، معكم فلان)
+                        2. عبارات تغيير المتحدث (أعطي الكلمة لـ، شكراً)
+                        3. الأسماء والمناصب
+
+                        أرجع قائمة بالمتحدثين وما قالوه."""
+                    },
+                    {
+                        "role": "user",
+                        "content": f"حلل هذا النص وحدد المتحدثين:\n{full_text[:2000]}"
+                    }
+                ],
+                max_tokens=1000,
+                temperature=0.3
             )
 
-        print(f"Successfully used model: {model_to_use}")
-        return enhanced_transcript.choices[0].message.content
+            gpt_analysis = response['choices'][0]['message']['content']
+            print(f"GPT Analysis: {gpt_analysis[:200]}...")
+
+        except Exception as gpt_error:
+            print(f"GPT enhancement failed: {gpt_error}")
+            # استمر بالمعالجة اليدوية
+
+        # معالجة المقاطع لتحديد المتحدثين
+        enhanced_segments = []
+        current_speaker = "غير معروف"
+
+        for i, segment in enumerate(segments):
+            text = segment['text']
+
+            # محاولة تحديد المتحدث من النص
+            identified_speaker = identify_speaker_from_text(text)
+            if identified_speaker:
+                current_speaker = identified_speaker
+                print(f"Identified speaker: {current_speaker}")
+
+            # البحث عن إشارات تغيير المتحدث
+            if any(phrase in text for phrase in ['أعطي الكلمة', 'شكراً دكتور', 'شكراً أستاذ']):
+                # قد يكون هناك متحدث جديد في المقطع التالي
+                print(f"Speaker change detected in: {text[:50]}...")
+
+            enhanced_segments.append({
+                'start': segment['start'],
+                'end': segment['end'],
+                'text': text,
+                'speaker': current_speaker
+            })
+
+        print(f"Enhanced {len(enhanced_segments)} segments")
+        return enhanced_segments
 
     except Exception as e:
-        print(f"Error with GPT API: {str(e)}")
-        # استرجاع النص الأصلي في حالة الخطأ للاختبار فقط
-        return transcript_text
+        logger.error(f"Error in enhance_transcript_with_gpt: {str(e)}")
+        raise Exception(f"Enhancement failed: {str(e)}")
 
 
-def extract_decisions_and_tasks(transcript_text):
+def extract_decisions_and_tasks(segments):
     """
-    استخراج القرارات والمهام من النص باستخدام GPT
-    استخدام GPT-4o إذا كان متاحاً، وإلا استخدام GPT-3.5-turbo
+    استخراج القرارات والمهام من المقاطع
     """
+    print("Extracting decisions and tasks...")
+
+    decisions = []
+    tasks = []
+
+    decision_keywords = [
+        'القرار', 'نصدر القرار', 'تقرر', 'الموافقة على', 'رفض',
+        'تم اعتماد', 'نوافق', 'تمت الموافقة', 'يُقر', 'يُعتمد'
+    ]
+
+    task_keywords = [
+        'مهمة', 'نكلف', 'يجب على', 'مطلوب من', 'يتولى',
+        'المسؤول عن', 'يقوم ب', 'تكليف', 'مسؤولية'
+    ]
+
+    for segment in segments:
+        text = segment.get('text', '')
+
+        # التحقق من القرارات
+        for keyword in decision_keywords:
+            if keyword in text:
+                decisions.append({
+                    'text': text,
+                    'speaker': segment.get('speaker', 'غير معروف'),
+                    'time': segment.get('start', 0)
+                })
+                print(f"Found decision: {text[:50]}...")
+                break
+
+        # التحقق من المهام
+        for keyword in task_keywords:
+            if keyword in text:
+                # محاولة استخراج اسم المكلف
+                assignee = None
+                if 'نكلف' in text or 'مهمة ل' in text:
+                    words = text.split()
+                    for i, word in enumerate(words):
+                        if word in ['نكلف', 'مهمة'] and i + 1 < len(words):
+                            assignee = words[i + 1]
+                            if i + 2 < len(words) and not words[i + 2].startswith('ب'):
+                                assignee += ' ' + words[i + 2]
+
+                tasks.append({
+                    'text': text,
+                    'speaker': segment.get('speaker', 'غير معروف'),
+                    'assignee': assignee,
+                    'time': segment.get('start', 0)
+                })
+                print(f"Found task for {assignee}: {text[:50]}...")
+                break
+
+    print(f"Extracted {len(decisions)} decisions and {len(tasks)} tasks")
+
+    # محاولة استخدام GPT لتحسين استخراج القرارات والمهام
     try:
-        client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
+        full_text = '\n'.join([s['text'] for s in segments])
 
-        system_prompt = """أنت مساعد متخصص في تحليل نصوص اجتماعات مجالس الإدارة المصرفية.
-        مهمتك هي استخراج القرارات والمهام من محضر الاجتماع.
-        - القرارات: هي الأمور التي تم الموافقة عليها أو رفضها من قبل المجلس
-        - المهام: هي الأعمال التي تم تكليف أشخاص محددين بها مع مواعيد التنفيذ إن وجدت
-        """
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {
+                    "role": "system",
+                    "content": """استخرج القرارات والمهام من محضر الاجتماع.
+                    القرارات: ما تم الموافقة عليه أو رفضه
+                    المهام: ما تم تكليف شخص به
+                    اذكر اسم المسؤول عن كل مهمة."""
+                },
+                {
+                    "role": "user",
+                    "content": f"استخرج القرارات والمهام:\n{full_text[:2000]}"
+                }
+            ],
+            max_tokens=500,
+            temperature=0.3
+        )
 
-        # محاولة استخدام GPT-4o، وإذا فشل، استخدام GPT-3.5-turbo
-        try:
-            model_to_use = "gpt-4o"
-            response = client.chat.completions.create(
-                model=model_to_use,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"استخرج القرارات والمهام من نص الاجتماع التالي: {transcript_text}"}
-                ]
-            )
-        except Exception as model_error:
-            print(f"Error with GPT-4o, falling back to GPT-3.5: {str(model_error)}")
-            model_to_use = "gpt-3.5-turbo"
-            response = client.chat.completions.create(
-                model=model_to_use,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"استخرج القرارات والمهام من نص الاجتماع التالي: {transcript_text}"}
-                ]
-            )
-
-        print(f"Successfully used model: {model_to_use}")
-        return response.choices[0].message.content
+        gpt_extraction = response['choices'][0]['message']['content']
+        print(f"GPT Extraction: {gpt_extraction[:200]}...")
 
     except Exception as e:
-        print(f"Error with GPT API: {str(e)}")
-        # استرجاع قرارات ومهام افتراضية في حالة الخطأ للاختبار فقط
-        return """
-        القرارات:
-        1. الموافقة على زيادة ميزانية التسويق بنسبة 10%.
+        print(f"GPT extraction failed: {e}")
 
-        المهام:
-        1. يجب على أحمد تقديم خطة التسويق المحدثة خلال أسبوع.
-        """
+    return {
+        'decisions': decisions,
+        'tasks': tasks
+    }

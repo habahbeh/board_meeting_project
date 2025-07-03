@@ -10,5 +10,6 @@ urlpatterns = [
     path('process/<int:meeting_id>/', views.process_meeting, name='process_meeting'),
     path('status/<int:meeting_id>/', views.processing_status, name='processing_status'),
     path('check_status/<int:meeting_id>/', views.check_processing_status, name='check_status'),
+    path('debug/', views.debug_openai, name='debug_openai'),
 
 ]

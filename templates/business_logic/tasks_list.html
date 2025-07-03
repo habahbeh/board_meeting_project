@@ -1,0 +1,163 @@
+<!-- templates/business_logic/tasks_list.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    .task-card {
+        margin-bottom: 20px;
+        border-right: 4px solid #ffc107;
+        transition: all 0.3s ease;
+    }
+    .task-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .task-header {
+        background-color: #f8f9fa;
+        padding: 10px 15px;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .task-content {
+        padding: 15px;
+    }
+    .meeting-info {
+        font-size: 14px;
+        color: #6c757d;
+    }
+    .assignee-badge {
+        background-color: #ffc107;
+        color: #212529;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+    }
+    .task-status {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .status-pending {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+    .status-completed {
+        background-color: #d4edda;
+        color: #155724;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h2>{% trans "المهام والتكليفات" %}</h2>
+        <p class="text-muted">{% trans "جميع المهام المستخرجة من الاجتماعات المعالجة" %}</p>
+    </div>
+    <div class="col-md-4 text-right">
+        <a href="{% url 'business_logic:decisions' %}" class="btn btn-outline-success">
+            <i class="fa fa-gavel"></i> {% trans "عرض القرارات" %}
+        </a>
+    </div>
+</div>
+
+{% if tasks %}
+    <div class="tasks-container">
+        {% for task in tasks %}
+            <div class="card task-card">
+                <div class="task-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>{{ task.meeting.title }}</strong>
+                            <span class="meeting-info">- {{ task.meeting.date }}</span>
+                        </div>
+                        <div>
+                            <span class="assignee-badge">
+                                <i class="fa fa-user-check"></i> {{ task.speaker.name|default:"غير محدد" }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-content">
+                    <p class="mb-2">
+                        <i class="fa fa-tasks text-warning"></i>
+                        {{ task.text }}
+                    </p>
+
+                    <!-- استخراج المسؤول من النص إن وجد -->
+                    {% if "نكلف" in task.text or "مهمة ل" in task.text %}
+                        <div class="mt-2">
+                            <span class="task-status status-pending">
+                                <i class="fa fa-clock"></i> {% trans "قيد التنفيذ" %}
+                            </span>
+                        </div>
+                    {% endif %}
+
+                    <div class="mt-3 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            <i class="fa fa-clock"></i>
+                            {% trans "الوقت في التسجيل" %}: {{ task.start_time|floatformat:0 }}s
+                        </small>
+                        <div>
+                            <a href="{% url 'transcription:view_meeting' task.meeting.id %}#segment-{{ task.id }}"
+                               class="btn btn-sm btn-outline-primary">
+                                <i class="fa fa-eye"></i> {% trans "عرض في السياق" %}
+                            </a>
+                            <button class="btn btn-sm btn-outline-success"
+                                    onclick="alert('{% trans "سيتم إضافة ميزة تتبع المهام قريباً" %}')">
+                                <i class="fa fa-check"></i> {% trans "تم الإنجاز" %}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- ملخص المهام -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">{% trans "ملخص المهام" %}</h5>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h3 class="text-warning">{{ tasks.count }}</h3>
+                    <p class="text-muted">{% trans "إجمالي المهام" %}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-primary">{{ tasks.values.meeting.distinct.count }}</h3>
+                    <p class="text-muted">{% trans "من الاجتماعات" %}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-info">{{ tasks.values.speaker.distinct.count }}</h3>
+                    <p class="text-muted">{% trans "مسؤول مختلف" %}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-success">0</h3>
+                    <p class="text-muted">{% trans "مهام منجزة" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="alert alert-info text-center">
+        <i class="fa fa-info-circle fa-3x mb-3"></i>
+        <h4>{% trans "لا توجد مهام مسجلة" %}</h4>
+        <p>{% trans "لم يتم استخراج أي مهام من الاجتماعات المعالجة حتى الآن." %}</p>
+        <a href="{% url 'transcription:meetings' %}" class="btn btn-primary mt-3">
+            <i class="fa fa-list"></i> {% trans "عرض الاجتماعات" %}
+        </a>
+    </div>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // يمكن إضافة وظائف JavaScript لتتبع المهام في المستقبل
+    function markTaskComplete(taskId) {
+        // TODO: تنفيذ وظيفة تحديث حالة المهمة
+        console.log('Mark task as complete:', taskId);
+    }
+</script>
+{% endblock %}

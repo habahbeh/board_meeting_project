@@ -1,0 +1,170 @@
+<!-- templates/transcription/meetings_list.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    .meeting-card {
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        border-right: 4px solid #007bff;
+    }
+    .meeting-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .meeting-status {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .meeting-info {
+        margin-bottom: 15px;
+    }
+    .meeting-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #e9ecef;
+    }
+    .stat-item {
+        text-align: center;
+    }
+    .stat-item .number {
+        font-size: 24px;
+        font-weight: bold;
+        color: #007bff;
+    }
+    .stat-item .label {
+        font-size: 12px;
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h2>{% trans "جميع الاجتماعات" %}</h2>
+        <p class="text-muted">{% trans "عرض جميع الاجتماعات المرفوعة والمعالجة" %}</p>
+    </div>
+    <div class="col-md-4 text-right">
+        <a href="{% url 'audio_processing:upload_meeting' %}" class="btn btn-primary">
+            <i class="fa fa-plus"></i> {% trans "رفع اجتماع جديد" %}
+        </a>
+    </div>
+</div>
+
+{% if meetings %}
+    <div class="row">
+        {% for meeting in meetings %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card meeting-card h-100">
+                    <div class="meeting-status">
+                        {% if meeting.processed %}
+                            <span class="badge badge-success">{% trans "مكتمل" %}</span>
+                        {% else %}
+                            <span class="badge badge-warning">{% trans "قيد المعالجة" %}</span>
+                        {% endif %}
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ meeting.title }}</h5>
+                        <div class="meeting-info">
+                            <p class="mb-1">
+                                <i class="fa fa-calendar"></i> {{ meeting.date }}
+                            </p>
+                            <p class="mb-1">
+                                <i class="fa fa-clock"></i> {{ meeting.created_at|date:"d/m/Y H:i" }}
+                            </p>
+                            {% if meeting.description %}
+                                <p class="text-muted small">{{ meeting.description|truncatewords:20 }}</p>
+                            {% endif %}
+                        </div>
+
+                        {% if meeting.processed %}
+                            <div class="meeting-stats">
+                                <div class="stat-item">
+                                    <div class="number">{{ meeting.segments.count }}</div>
+                                    <div class="label">{% trans "مقطع" %}</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="number">{{ meeting.segments.values_list.speaker.distinct.count }}</div>
+                                    <div class="label">{% trans "متحدث" %}</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="number">
+                                        {% with decisions=meeting.segments.filter.is_decision.count %}
+                                            {{ decisions }}
+                                        {% endwith %}
+                                    </div>
+                                    <div class="label">{% trans "قرار" %}</div>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <div class="mt-3">
+                            {% if meeting.processed %}
+                                <a href="{% url 'transcription:view_meeting' meeting.id %}" class="btn btn-primary btn-sm btn-block">
+                                    <i class="fa fa-eye"></i> {% trans "عرض النص" %}
+                                </a>
+                                <div class="btn-group btn-block mt-2" role="group">
+                                    <a href="{% url 'transcription:meeting_report' meeting.id %}" class="btn btn-outline-primary btn-sm">
+                                        <i class="fa fa-file-alt"></i> {% trans "التقرير" %}
+                                    </a>
+                                    <a href="{% url 'transcription:edit_transcript' meeting.id %}" class="btn btn-outline-primary btn-sm">
+                                        <i class="fa fa-edit"></i> {% trans "تحرير" %}
+                                    </a>
+                                </div>
+                            {% else %}
+                                <a href="{% url 'audio_processing:processing_status' meeting.id %}" class="btn btn-secondary btn-sm btn-block">
+                                    <i class="fa fa-spinner"></i> {% trans "حالة المعالجة" %}
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- إحصائيات عامة -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">{% trans "إحصائيات عامة" %}</h5>
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h3 class="text-primary">{{ meetings.count }}</h3>
+                    <p class="text-muted">{% trans "إجمالي الاجتماعات" %}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-success">{{ meetings.filter.processed.count }}</h3>
+                    <p class="text-muted">{% trans "اجتماعات مكتملة" %}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-warning">{{ meetings.exclude.processed.count }}</h3>
+                    <p class="text-muted">{% trans "قيد المعالجة" %}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="text-info">
+                        {% with total_segments=meetings.filter.processed.segments.count %}
+                            {{ total_segments }}
+                        {% endwith %}
+                    </h3>
+                    <p class="text-muted">{% trans "إجمالي المقاطع" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="alert alert-info text-center">
+        <i class="fa fa-info-circle fa-3x mb-3"></i>
+        <h4>{% trans "لا توجد اجتماعات حتى الآن" %}</h4>
+        <p>{% trans "ابدأ برفع أول اجتماع لك للحصول على نص منسوخ مع تحديد المتحدثين واستخراج القرارات." %}</p>
+        <a href="{% url 'audio_processing:upload_meeting' %}" class="btn btn-primary mt-3">
+            <i class="fa fa-upload"></i> {% trans "رفع اجتماع جديد" %}
+        </a>
+    </div>
+{% endif %}
+{% endblock %}

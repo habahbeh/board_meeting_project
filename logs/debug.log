@@ -105,3 +105,1002 @@ INFO 2025-07-02 23:35:21,508 basehttp "GET /ar/audio/check_status/9/ HTTP/1.1" 2
 INFO 2025-07-02 23:35:23,031 basehttp "GET /ar/audio/status/9/ HTTP/1.1" 200 6814
 INFO 2025-07-02 23:35:26,422 basehttp "GET /ar/transcription/view/9/ HTTP/1.1" 200 13060
 INFO 2025-07-02 23:35:41,490 basehttp - Broken pipe from ('127.0.0.1', 51793)
+INFO 2025-07-02 23:56:03,008 autoreload Watching for file changes with StatReloader
+INFO 2025-07-02 23:56:19,646 basehttp "GET /ar/ HTTP/1.1" 302 0
+INFO 2025-07-02 23:56:19,682 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14352
+INFO 2025-07-02 23:56:19,717 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-07-02 23:56:19,718 basehttp "GET /static/css/rtl.css HTTP/1.1" 304 0
+INFO 2025-07-02 23:56:19,719 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-07-02 23:56:23,302 basehttp "GET /ar/transcription/view/5/ HTTP/1.1" 200 12226
+INFO 2025-07-02 23:56:23,361 basehttp "GET /media/meeting_audio/F_UhrO3KL.mp3 HTTP/1.1" 200 480736
+INFO 2025-07-02 23:56:28,173 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14352
+INFO 2025-07-02 23:56:30,830 basehttp "GET /ar/transcription/view/9/ HTTP/1.1" 200 13060
+INFO 2025-07-02 23:56:35,223 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14352
+INFO 2025-07-02 23:56:35,226 basehttp - Broken pipe from ('127.0.0.1', 51961)
+INFO 2025-07-02 23:56:36,037 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-02 23:56:48,021 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-02 23:56:48,021 tasks Processing meeting 10 in testing mode
+INFO 2025-07-02 23:56:48,022 tasks Starting test processing for meeting 10
+INFO 2025-07-02 23:56:48,022 tasks Simulating processing delay of 5 seconds...
+INFO 2025-07-02 23:56:48,035 basehttp "GET /ar/audio/status/10/ HTTP/1.1" 200 12618
+INFO 2025-07-02 23:56:48,094 basehttp "GET /ar/audio/check_status/10/ HTTP/1.1" 200 46
+INFO 2025-07-02 23:56:53,041 tasks Creating transcript segments with clear speaker identification...
+INFO 2025-07-02 23:56:53,079 tasks Creating meeting report...
+INFO 2025-07-02 23:56:53,083 tasks Meeting 10 processing completed successfully in test mode.
+INFO 2025-07-02 23:56:53,127 basehttp "GET /ar/audio/check_status/10/ HTTP/1.1" 200 45
+INFO 2025-07-02 23:56:54,650 basehttp "GET /ar/audio/status/10/ HTTP/1.1" 200 6817
+INFO 2025-07-02 23:57:20,013 basehttp "GET /ar/transcription/view/10/ HTTP/1.1" 200 36948
+INFO 2025-07-02 23:57:35,086 basehttp - Broken pipe from ('127.0.0.1', 51960)
+INFO 2025-07-03 00:01:26,395 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/board_meeting_project/settings.py changed, reloading.
+INFO 2025-07-03 00:01:29,469 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:01:39,736 basehttp "GET /ar/ HTTP/1.1" 302 0
+INFO 2025-07-03 00:01:39,765 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14354
+INFO 2025-07-03 00:01:42,308 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 00:02:15,106 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-03 00:02:15,106 tasks Processing meeting 11 in normal mode
+INFO 2025-07-03 00:02:15,107 tasks Starting real processing for meeting 11
+INFO 2025-07-03 00:02:15,107 tasks Converting and enhancing audio...
+INFO 2025-07-03 00:02:15,152 basehttp "GET /ar/audio/status/11/ HTTP/1.1" 200 12618
+INFO 2025-07-03 00:02:15,238 basehttp "GET /ar/audio/check_status/11/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:02:20,379 basehttp "GET /ar/audio/check_status/11/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:02:25,539 basehttp "GET /ar/audio/check_status/11/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:02:25,553 tasks Transcribing with Whisper...
+ERROR 2025-07-03 00:02:25,554 whisper_gpt4o Error with Whisper API: Client.__init__() got an unexpected keyword argument 'proxies'
+INFO 2025-07-03 00:02:25,554 tasks Enhancing transcript and identifying speakers...
+INFO 2025-07-03 00:02:25,554 tasks Extracting decisions and tasks...
+INFO 2025-07-03 00:02:25,586 tasks Meeting 11 processing completed successfully.
+INFO 2025-07-03 00:02:30,551 basehttp "GET /ar/audio/check_status/11/ HTTP/1.1" 200 45
+INFO 2025-07-03 00:02:32,075 basehttp "GET /ar/audio/status/11/ HTTP/1.1" 200 6817
+INFO 2025-07-03 00:02:39,090 basehttp "GET /ar/transcription/view/11/ HTTP/1.1" 200 27431
+INFO 2025-07-03 00:02:39,190 basehttp "GET /media/meeting_audio/meeting1_whpmnqA.mp3 HTTP/1.1" 200 4352450
+WARNING 2025-07-03 00:02:49,594 log Not Found: /favicon.ico
+WARNING 2025-07-03 00:02:49,594 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 00:07:36,540 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/transcription/utils/whisper_gpt4o.py changed, reloading.
+INFO 2025-07-03 00:07:38,381 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:07:57,343 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 00:07:58,633 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:09:14,445 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/views.py changed, reloading.
+INFO 2025-07-03 00:09:15,862 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:09:26,582 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/views.py changed, reloading.
+INFO 2025-07-03 00:09:28,005 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:11:00,822 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/urls.py changed, reloading.
+INFO 2025-07-03 00:11:02,379 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:11:12,391 basehttp "GET /ar/audio/debug/ HTTP/1.1" 302 0
+INFO 2025-07-03 00:11:12,552 basehttp "GET /ar/login/?next=/ar/audio/debug/ HTTP/1.1" 200 5900
+INFO 2025-07-03 00:11:12,620 basehttp "GET /static/css/rtl.css HTTP/1.1" 200 743
+INFO 2025-07-03 00:11:12,622 basehttp "GET /static/css/custom.css HTTP/1.1" 200 1401
+INFO 2025-07-03 00:11:12,622 basehttp "GET /static/js/custom.js HTTP/1.1" 200 1626
+WARNING 2025-07-03 00:11:13,815 log Not Found: /favicon.ico
+WARNING 2025-07-03 00:11:13,815 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 00:11:19,251 basehttp "POST /ar/login/?next=/ar/audio/debug/ HTTP/1.1" 302 0
+ERROR 2025-07-03 00:11:19,280 log Internal Server Error: /ar/audio/debug/
+Traceback (most recent call last):
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/views.py", line 122, in debug_openai
+    media_path = os.path.join(settings.MEDIA_ROOT, 'meeting_audio')
+NameError: name 'os' is not defined
+ERROR 2025-07-03 00:11:19,281 basehttp "GET /ar/audio/debug/ HTTP/1.1" 500 66636
+INFO 2025-07-03 00:11:38,197 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/views.py changed, reloading.
+INFO 2025-07-03 00:11:39,872 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:11:48,238 basehttp "GET /ar/audio/debug/ HTTP/1.1" 200 897
+INFO 2025-07-03 00:31:42,063 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:32:47,606 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/transcription/utils/whisper_gpt4o.py changed, reloading.
+INFO 2025-07-03 00:32:49,327 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 00:34:53,963 basehttp "GET /ar/audio/debug/ HTTP/1.1" 200 874
+INFO 2025-07-03 00:34:56,446 basehttp "GET /ar/audio/debug/ HTTP/1.1" 200 874
+INFO 2025-07-03 00:35:01,834 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14357
+INFO 2025-07-03 00:35:01,908 basehttp "GET /static/css/rtl.css HTTP/1.1" 304 0
+INFO 2025-07-03 00:35:01,909 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-07-03 00:35:01,909 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-07-03 00:35:04,340 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 00:35:17,517 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-03 00:35:17,517 tasks Processing meeting 12 in REAL mode with OpenAI
+INFO 2025-07-03 00:35:17,517 tasks API Key present: sk-wI9QVnW...
+INFO 2025-07-03 00:35:17,518 tasks Starting real processing for meeting 12
+INFO 2025-07-03 00:35:17,518 tasks Converting and enhancing audio...
+INFO 2025-07-03 00:35:17,561 basehttp "GET /ar/audio/status/12/ HTTP/1.1" 200 12618
+INFO 2025-07-03 00:35:17,641 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:22,870 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:28,020 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:33,140 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:33,625 tasks Transcribing with Whisper...
+DEBUG 2025-07-03 00:35:33,686 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 00:35:33,687 util api_version=None data="{'model': 'whisper-1', 'language': 'ar'}" message='Post details'
+INFO 2025-07-03 00:35:38,155 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:43,166 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:48,179 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:53,578 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:35:59,577 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:36:04,588 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:36:10,576 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:36:16,577 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:36:21,590 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:36:26,602 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 00:36:27,085 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=17541 request_id=req_4f1a7c60442e4e9a4297d9c28e0c18e8 response_code=200
+INFO 2025-07-03 00:36:27,085 tasks Enhancing transcript and identifying speakers...
+DEBUG 2025-07-03 00:36:27,086 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 00:36:27,086 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0623\\u0646\\u062a \\u0645\\u0633\\u0627\\u0639\\u062f \\u0645\\u062a\\u062e\\u0635\\u0635 \\u0641\\u064a \\u062a\\u062d\\u0644\\u064a\\u0644 \\u0645\\u062d\\u0627\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639\\u0627\\u062a.\\n                        \\u0645\\u0647\\u0645\\u062a\\u0643: \\u062a\\u062d\\u062f\\u064a\\u062f \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0641\\u064a \\u0627\\u0644\\u0646\\u0635.\\n                        \\u0627\\u0628\\u062d\\u062b \\u0639\\u0646:\\n                        1. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u0627\\u0644\\u062a\\u0639\\u0631\\u064a\\u0641 \\u0628\\u0627\\u0644\\u0646\\u0641\\u0633 (\\u0623\\u0646\\u0627 \\u0641\\u0644\\u0627\\u0646\\u060c \\u0645\\u0639\\u0643\\u0645 \\u0641\\u0644\\u0627\\u0646)\\n                        2. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u062a\\u063a\\u064a\\u064a\\u0631 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b (\\u0623\\u0639\\u0637\\u064a \\u0627\\u0644\\u0643\\u0644\\u0645\\u0629 \\u0644\\u0640\\u060c \\u0634\\u0643\\u0631\\u0627\\u064b)\\n                        3. \\u0627\\u0644\\u0623\\u0633\\u0645\\u0627\\u0621 \\u0648\\u0627\\u0644\\u0645\\u0646\\u0627\\u0635\\u0628\\n\\n                        \\u0623\\u0631\\u062c\\u0639 \\u0642\\u0627\\u0626\\u0645\\u0629 \\u0628\\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0648\\u0645\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0647."}, {"role": "user", "content": "\\u062d\\u0644\\u0644 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0646\\u0635 \\u0648\\u062d\\u062f\\u062f \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646:\\n\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0627\\u062e\\u064a \\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0634\\u0627\\u0648\\u0628\\u0647 \\u0628\\u0639\\u062f\\u064a\\u0646 \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0627\\u0646\\u062a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0627\\u0646\\u062a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0645\\u0627 \\u0639\\u0627\\u064a\\u0634 \\u0641\\u064a\\u0647 \\u0648\\u0644\\u0627 \\u0643\\u0644\\u0645\\u0629 \\u0648\\u0644\\u0627 \\u0645\\u0642\\u0627\\u0628\\u0644\\u0629 \\u0633\\u0631\\u0639\\u0629 \\u0633\\u0631\\u0639\\u0629 \\u0647\\u0630\\u0627 \\u0646\\u0638\\u0627\\u0645 \\u0645\\u0642\\u0627\\u0648\\u0645 \\u0645\\u0646\\u0639 \\u0627\\u0631\\u062a\\u0643\\u0628\\u0647 \\u0634\\u0639\\u0628\\u064a \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a \\u0646\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u062b\\u0645 \\u0646\\u0639\\u0648\\u062f \\u0627\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u062b\\u0627\\u0646\\u064a \\u0648\\u062d\\u062f\\u0647 \\u0648\\u0633\\u0646\\u0639\\u0648\\u062f \\u0627\\u0646\\u062a \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0642\\u0648\\u0645\\u062c\\u064a \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0646\\u0627 \\u0628\\u062d\\u0630\\u0641\\u0643 \\u0627\\u0646\\u0627 \\u0639\\u0627\\u064a\\u0634\\u062a \\u0643\\u0644 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0643 \\u0627\\u0646\\u0627 \\u0627\\u0628\\u0646 \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a\\u0629 \\u0645\\u0634 \\u062c\\u0627\\u064a \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0642\\u0645\\u0631 \\u062a\\u0641\\u062a\\u0631\\u0648\\u0646 \\u0648\\u062a\\u0643\\u0630\\u0628\\u0648\\u0646 \\u0633\\u0631\\u0639\\u0629 \\u0634\\u0648\\u064a \\u0627\\u0631\\u062c\\u0639 \\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0645\\u0639\\u0647 \\u0648\\u062a\\u062f\\u0645\\u0631\\u0648\\u0627 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0647\\u0645 \\u064a\\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0645\\u0639 \\u0627\\u0644\\u0627\\u0645\\u0628\\u0631\\u064a\\u0627\\u0644\\u064a\\u0629 \\u0645\\u0627\\u0634\\u064a \\u0628\\u0627\\u0644\\u0633\\u0642\\u0648\\u0637 \\u0627\\u0646\\u062a \\u0645\\u0639\\u0647 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0637\\u0644\\u0628\\u062a \\u0645\\u0646\\u0643 \\u0627\\u0631\\u062c\\u0648\\u0643 \\u062a\\u0633\\u0642\\u0637 \\u062a\\u062f\\u0645\\u0631 \\u0643\\u0644 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062e\\u0644\\u064a\\u0646\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0645\\u0646 \\u0634\\u0623\\u0646 \\u0627\\u0644\\u0644\\u0647 \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0632\\u064a\\u0646 \\u0627\\u0644\\u0639\\u0628\\u062f\\u064a\\u0646 \\u0628\\u0646 \\u0639\\u0644\\u064a \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0627\\u0644\\u0642\\u0630\\u0627\\u0641\\u064a \\u062a\\u062e\\u0632\\u0646 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646 \\u0627\\u062f\\u0639\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0646\\u0641\\u0633\\u0643\\u0645 \\u0627\\u0646 \\u062a\\u0630\\u0647\\u0628\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u0639\\u0633\\u0643\\u0631 \\u0627\\u0644\\u0642\\u0648\\u0645\\u064a \\u0644\\u0639\\u0646\\u062f \\u0628\\u0644\\u0627\\u0644\\u064a \\u0637\\u0647\\u0631\\u0627\\u0646 \\u0627\\u0644\\u0630\\u064a\\u0646 \\u064a\\u0642\\u062a\\u0644\\u0648\\u0646 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0645\\u0627\\u0630\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0627 \\u0628\\u0627\\u0644\\u0627\\u0645\\u0633 \\u0646\\u062d\\u0646 \\u0645\\u0634\\u0627\\u0631\\u0643\\u0648\\u0646 \\u0648\\u0646\\u0631\\u064a\\u062f \\u0627\\u0646 \\u0646\\u0633\\u062d\\u0642 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0645\\u0634 \\u0639\\u0627\\u0628 \\u0639\\u0644\\u064a\\u0643\\u0645 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u0629 \\u0627\\u0648\\u0644\\u0627 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0644\\u0645\\u0634\\u0627\\u0647\\u062f \\u0639\\u0646 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0645\\u0633\\u062a\\u0648\\u0649 \\u0627\\u0644\\u0647\\u0627\\u0628\\u0637 \\u0627\\u0646\\u062a\\u0645 \\u0627\\u0645 \\u064a\\u0642\\u0648\\u0644\\u0648\\u0646 \\u0647\\u0630\\u0627 \\u064a\\u0627 \\u0627\\u0633\\u0645\\u0627\\u0621 \\u0627\\u0646\\u0627 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u0629 \\u0627\\u0644\\u0642\\u0648\\u0645\\u062c\\u064a\\u0646 \\u064a\\u0642\\u0648\\u0644\\u0648\\u0646 \\u0643\\u0627\\u0644\\u0639\\u0627\\u0647\\u0631\\u0629 \\u0627\\u0644\\u062a\\u064a \\u062a\\u062d\\u0627\\u0636\\u0631 \\u0641\\u064a \\u0627\\u0644\\u0634\\u0631\\u0642 \\u0627\\u0646\\u062a\\u0645 \\u062d\\u064a\\u0646 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0644\\u0645 \\u0646\\u0634\\u0627\\u0631\\u0643 \\u0645\\u0639\\u0647\\u0645 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0646\\u062a \\u0644\\u0627 \\u0631\\u062d \\u062a\\u0641\\u0647\\u0645 \\u0648\\u0644\\u0627 \\u0627\\u0644\\u0644\\u0647 \\u064a\\u0641\\u0647\\u0645\\u0643 \\u0645\\u0627 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0639\\u0644\\u0649 \\u0643\\u0644 \\u062d\\u0627\\u0644 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0633\\u0643\\u062a \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0648\\u0646 \\u064a\\u0627 \\u0633\\u0644\\u0645\\u064a \\u0627\\u0641\\u0647\\u0645 \\u0627\\u0641\\u0647\\u0645 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0646\\u0627 \\u0628\\u062f\\u064a \\u0627\\u0633\\u0623\\u0644 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0633\\u0643\\u062a \\u0645\\u0634 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0628\\u0635\\u0631\\u0627\\u062d\\u0629 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a \\u0634\\u0628\\u0627 \\u0627\\u0646\\u0627 \\u0628\\u062f\\u064a \\u0627\\u0633\\u0643\\u062a \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u0628\\u062d\\u0642 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0628\\u062f\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0633\\u0624\\u0627\\u0644 \\u062e\\u0644\\u0635 \\u0627\\u0644\\u0648\\u0642\\u062a \\u0648\\u0627\\u0646\\u062a\\u064a \\u0628\\u062a\\u0628\\u0635\\u064a\\u0647 \\u0633\\u062a\\u0648\\u0635\\u0644\\u0648\\u0647\\u0627 \\u0627\\u0644\\u0649 \\u0627\\u0637\\u0631\\u0627\\u0641 \\u0648\\u0635\\u0644\\u062a \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0631\\u0633\\u0627\\u0644\\u0629 \\u0643\\u0644\\u0647\\u0645 \\u0628\\u064a\\u0634\\u062a\\u063a\\u0644\\u0648 \\u0639\\u0646\\u062f\\u0647\\u0645 \\u062f\\u064a \\u0642\\u0646\\u0648\\u0627\\u062a\\u0647\\u0645 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0647 \\u062c\\u0631\\u064a\\u062f\\u064a \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0647 \\u0645\\u0633\\u062a\\u0634\\u0641\\u0649 \\u0627\\u0644\\u0641\\u0627\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0631\\u0648\\u0633\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0635\\u064a\\u0646\\u064a\\u0629 \\u0648\\u062d\\u0632\\u0628 \\u0627\\u0644\\u0644\\u0647 \\u0647\\u0644 \\u062a\\u0639\\u0644\\u0645 \\u0645\\u0646 \\u0645\\u0627\\u062a \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0627\\u0646\\u0627 \\u0628\\u062f\\u064a \\u0627\\u0639\\u0637\\u0649 \\u0636\\u062d\\u0643 \\u064a\\u0627 \\u0633\\u0644\\u0645\\u064a \\u064a\\u0627 \\u0627\\u062e\\u064a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0645\\u0627\\u0634\\u064a \\u0645\\u0627\\u0634\\u064a \\u0627\\u0644\\u0644\\u064a \\u0628\\u062f\\u0643 \\u064a\\u0639\\u0646\\u064a \\u0632\\u0628\\u062d\\u062a\\u0648 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0648\\u0642\\u0627\\u0644\\u0648 \\u062c\\u0627\\u064a\\u064a\\u0646 \\u064a\\u0648\\u0632\\u0639\\u0648 \\u064a\\u0627 \\u0633\\u0644\\u0645\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0628\\u062d\\u0627\\u062c\\u0629 \\u0644\\u064a \\u0644\\u0627\\u0630\\u0646 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0648\\u0627\\u064a \\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0627\\u0644\\u062c\\u0648\\u064a\\u0629 \\u0628\\u0631\\u0628\\u0643 \\u0645\\u0627\\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0627\\u0644 \\u0645\\u0627\\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0627\\u0644 \\u0645\\u0627\\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0627\\u0644 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0628\\u062f\\u0648 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0632\\u0628\\u062d\\u062a\\u0648 \\u0627\\u0644\\u0627\\u0645\\u064a \\u0635\\u0627\\u0631\\u0648\\u0627 \\u0639\\u064a\\u0646\\u0648 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0639\\u064a\\u0646\\u0648 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0641\\u064a \\u0627\\u0644\\u0627\\u062e\\u0644\\u0627\\u0642 \\u0627\\u0644\\u0644\\u064a \\u0647\\u0648 \\u0639\\u0632 \\u0627\\u0644\\u062f\\u064a\\u0645\\u0642\\u0631\\u0627\\u0637\\u064a\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0648\\u062a\\u0642\\u0641 \\u0645\\u0639\\u064a \\u0634\\u0648 \\u0631\\u0627\\u064a\\u0643 \\u0627\\u0644\\u0627\\u0646\\u0638\\u0645\\u0629 \\u0627\\u0644\\u0642\\u0648\\u0645\\u062c\\u064a\\u0629 \\u0627\\u0644\\u0645\\u062d\\u0627\\u0635\\u0631\\u0629 \\u0628\\u0627\\u0644\\u062b\\u0648\\u0631\\u0627\\u062a \\u0645\\u0633\\u062a\\u0639\\u062f\\u0629 \\u062a\\u062f\\u0641\\u0639 \\u0627\\u0644\\u0645\\u0644\\u0627\\u064a\\u064a\\u0646 \\u0648\\u0627\\u0633\\u0623\\u0644\\u0647\\u0645 \\u062c\\u0631\\u0628\\u0648\\u0627 \\u0644\\u0627 \\u062a\\u0633\\u0623\\u0644 \\u062d\\u0643\\u064a\\u0645 \\u064a\\u0639\\u0646\\u064a \\u0628\\u062f\\u0643 \\u0627\\u0644\\u0641 \\u0633\\u0646\\u0629 \\u0628\\u0627\\u0644\\u062e\\u0644\\u064a\\u062c \\u0644\\u062a\\u0637\\u0627\\u0644\\u0639 \\u0631\\u0628\\u0639\\u0646 \\u0627\\u0644\\u0644\\u064a \\u0628\\u064a\\u062f\\u0631\\u064a \\u0628\\u064a\\u062f\\u0631\\u064a \\u0627\\u0631\\u062c\\u0648\\u0643 \\u062a\\u0633\\u0643\\u062a\\u0631 \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0646\\u062a\\u0648 \\u0627\\u0644\\u0642\\u0648\\u0645\\u064a\\u064a\\u0646 \\u0647\\u062f\\u0648\\u0644 \\u0627\\u0644\\u0635\\u0631\\u0627\\u0645\\u064a \\u0635\\u0648\\u062a\\u0648 \\u0634\\u063a\\u0644 \\u064a\\u0639\\u0646\\u064a \\u062d\\u0627\\u062c\\u064a \\u0639\\u0631\\u0628 \\u062c\\u0627\\u064a \\u064a\\u0648\\u0632\\u0639 \\u062c\\u0647\\u0627\\u062f\\u0627\\u062a \\u062d\\u0633\\u0646 \\u0633\\u0644\\u0648\\u0643 \\u0628\\u0627\\u062d\\u062b\\u064a\\u0646 \\u062c\\u0627\\u064a \\u064a\\u0648\\u0632\\u0639"}], "max_tokens": 1000, "temperature": 0.3}' message='Post details'
+INFO 2025-07-03 00:36:31,613 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+INFO 2025-07-03 00:36:36,626 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 00:36:38,749 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11342 request_id=req_0a5fc2c1723cb19a39f38336884d5571 response_code=200
+INFO 2025-07-03 00:36:38,754 tasks Extracting decisions and tasks...
+DEBUG 2025-07-03 00:36:38,754 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 00:36:38,755 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0627\\u0633\\u062a\\u062e\\u0631\\u062c \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a \\u0648\\u0627\\u0644\\u0645\\u0647\\u0627\\u0645 \\u0645\\u0646 \\u0645\\u062d\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639.\\n                    \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a: \\u0645\\u0627 \\u062a\\u0645 \\u0627\\u0644\\u0645\\u0648\\u0627\\u0641\\u0642\\u0629 \\u0639\\u0644\\u064a\\u0647 \\u0623\\u0648 \\u0631\\u0641\\u0636\\u0647\\n                    \\u0627\\u0644\\u0645\\u0647\\u0627\\u0645: \\u0645\\u0627 \\u062a\\u0645 \\u062a\\u0643\\u0644\\u064a\\u0641 \\u0634\\u062e\\u0635 \\u0628\\u0647\\n                    \\u0627\\u0630\\u0643\\u0631 \\u0627\\u0633\\u0645 \\u0627\\u0644\\u0645\\u0633\\u0624\\u0648\\u0644 \\u0639\\u0646 \\u0643\\u0644 \\u0645\\u0647\\u0645\\u0629."}, {"role": "user", "content": "\\u0627\\u0633\\u062a\\u062e\\u0631\\u062c \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a \\u0648\\u0627\\u0644\\u0645\\u0647\\u0627\\u0645:\\n\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0627\\u062e\\u064a \\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0634\\u0627\\u0648\\u0628\\u0647 \\u0628\\u0639\\u062f\\u064a\\u0646 \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0627\\u0646\\u062a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0627\\u0646\\u062a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0645\\u0627 \\u0639\\u0627\\u064a\\u0634 \\u0641\\u064a\\u0647 \\u0648\\u0644\\u0627 \\u0643\\u0644\\u0645\\u0629 \\u0648\\u0644\\u0627 \\u0645\\u0642\\u0627\\u0628\\u0644\\u0629 \\u0633\\u0631\\u0639\\u0629 \\u0633\\u0631\\u0639\\u0629 \\u0647\\u0630\\u0627 \\u0646\\u0638\\u0627\\u0645 \\u0645\\u0642\\u0627\\u0648\\u0645 \\u0645\\u0646\\u0639 \\u0627\\u0631\\u062a\\u0643\\u0628\\u0647 \\u0634\\u0639\\u0628\\u064a \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a \\u0646\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u062b\\u0645 \\u0646\\u0639\\u0648\\u062f \\u0627\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u062b\\u0627\\u0646\\u064a \\u0648\\u062d\\u062f\\u0647 \\u0648\\u0633\\u0646\\u0639\\u0648\\u062f \\u0627\\u0646\\u062a \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0642\\u0648\\u0645\\u062c\\u064a \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0646\\u0627 \\u0628\\u062d\\u0630\\u0641\\u0643 \\u0627\\u0646\\u0627 \\u0639\\u0627\\u064a\\u0634\\u062a \\u0643\\u0644 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0643 \\u0627\\u0646\\u0627 \\u0627\\u0628\\u0646 \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a\\u0629 \\u0645\\u0634 \\u062c\\u0627\\u064a \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0642\\u0645\\u0631 \\u062a\\u0641\\u062a\\u0631\\u0648\\u0646 \\u0648\\u062a\\u0643\\u0630\\u0628\\u0648\\u0646 \\u0633\\u0631\\u0639\\u0629 \\u0634\\u0648\\u064a \\u0627\\u0631\\u062c\\u0639 \\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0645\\u0639\\u0647 \\u0648\\u062a\\u062f\\u0645\\u0631\\u0648\\u0627 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0647\\u0645 \\u064a\\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0645\\u0639 \\u0627\\u0644\\u0627\\u0645\\u0628\\u0631\\u064a\\u0627\\u0644\\u064a\\u0629 \\u0645\\u0627\\u0634\\u064a \\u0628\\u0627\\u0644\\u0633\\u0642\\u0648\\u0637 \\u0627\\u0646\\u062a \\u0645\\u0639\\u0647 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0637\\u0644\\u0628\\u062a \\u0645\\u0646\\u0643 \\u0627\\u0631\\u062c\\u0648\\u0643 \\u062a\\u0633\\u0642\\u0637 \\u062a\\u062f\\u0645\\u0631 \\u0643\\u0644 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062e\\u0644\\u064a\\u0646\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0645\\u0646 \\u0634\\u0623\\u0646 \\u0627\\u0644\\u0644\\u0647 \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0632\\u064a\\u0646 \\u0627\\u0644\\u0639\\u0628\\u062f\\u064a\\u0646 \\u0628\\u0646 \\u0639\\u0644\\u064a \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0627\\u0644\\u0642\\u0630\\u0627\\u0641\\u064a \\u062a\\u062e\\u0632\\u0646 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646 \\u0627\\u062f\\u0639\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0646\\u0641\\u0633\\u0643\\u0645 \\u0627\\u0646 \\u062a\\u0630\\u0647\\u0628\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u0639\\u0633\\u0643\\u0631 \\u0627\\u0644\\u0642\\u0648\\u0645\\u064a \\u0644\\u0639\\u0646\\u062f \\u0628\\u0644\\u0627\\u0644\\u064a \\u0637\\u0647\\u0631\\u0627\\u0646 \\u0627\\u0644\\u0630\\u064a\\u0646 \\u064a\\u0642\\u062a\\u0644\\u0648\\u0646 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0645\\u0627\\u0630\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0627 \\u0628\\u0627\\u0644\\u0627\\u0645\\u0633 \\u0646\\u062d\\u0646 \\u0645\\u0634\\u0627\\u0631\\u0643\\u0648\\u0646 \\u0648\\u0646\\u0631\\u064a\\u062f \\u0627\\u0646 \\u0646\\u0633\\u062d\\u0642 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0645\\u0634 \\u0639\\u0627\\u0628 \\u0639\\u0644\\u064a\\u0643\\u0645 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u0629 \\u0627\\u0648\\u0644\\u0627 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0644\\u0645\\u0634\\u0627\\u0647\\u062f \\u0639\\u0646 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0645\\u0633\\u062a\\u0648\\u0649 \\u0627\\u0644\\u0647\\u0627\\u0628\\u0637 \\u0627\\u0646\\u062a\\u0645 \\u0627\\u0645 \\u064a\\u0642\\u0648\\u0644\\u0648\\u0646 \\u0647\\u0630\\u0627 \\u064a\\u0627 \\u0627\\u0633\\u0645\\u0627\\u0621 \\u0627\\u0646\\u0627 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u0629 \\u0627\\u0644\\u0642\\u0648\\u0645\\u062c\\u064a\\u0646 \\u064a\\u0642\\u0648\\u0644\\u0648\\u0646 \\u0643\\u0627\\u0644\\u0639\\u0627\\u0647\\u0631\\u0629 \\u0627\\u0644\\u062a\\u064a \\u062a\\u062d\\u0627\\u0636\\u0631 \\u0641\\u064a \\u0627\\u0644\\u0634\\u0631\\u0642 \\u0627\\u0646\\u062a\\u0645 \\u062d\\u064a\\u0646 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0644\\u0645 \\u0646\\u0634\\u0627\\u0631\\u0643 \\u0645\\u0639\\u0647\\u0645 \\u0627\\u0646\\u0627 \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0646\\u062a \\u0644\\u0627 \\u0631\\u062d \\u062a\\u0641\\u0647\\u0645 \\u0648\\u0644\\u0627 \\u0627\\u0644\\u0644\\u0647 \\u064a\\u0641\\u0647\\u0645\\u0643 \\u0645\\u0627 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0639\\u0644\\u0649 \\u0643\\u0644 \\u062d\\u0627\\u0644 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0633\\u0643\\u062a \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0648\\u0646 \\u064a\\u0627 \\u0633\\u0644\\u0645\\u064a \\u0627\\u0641\\u0647\\u0645 \\u0627\\u0641\\u0647\\u0645 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0646\\u0627 \\u0628\\u062f\\u064a \\u0627\\u0633\\u0623\\u0644 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0633\\u0643\\u062a \\u0645\\u0634 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0628\\u0635\\u0631\\u0627\\u062d\\u0629 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a \\u0634\\u0628\\u0627 \\u0627\\u0646\\u0627 \\u0628\\u062f\\u064a \\u0627\\u0633\\u0643\\u062a \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u0628\\u062d\\u0642 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0628\\u062f\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0633\\u0624\\u0627\\u0644 \\u062e\\u0644\\u0635 \\u0627\\u0644\\u0648\\u0642\\u062a \\u0648\\u0627\\u0646\\u062a\\u064a \\u0628\\u062a\\u0628\\u0635\\u064a\\u0647 \\u0633\\u062a\\u0648\\u0635\\u0644\\u0648\\u0647\\u0627 \\u0627\\u0644\\u0649 \\u0627\\u0637\\u0631\\u0627\\u0641 \\u0648\\u0635\\u0644\\u062a \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0631\\u0633\\u0627\\u0644\\u0629 \\u0643\\u0644\\u0647\\u0645 \\u0628\\u064a\\u0634\\u062a\\u063a\\u0644\\u0648 \\u0639\\u0646\\u062f\\u0647\\u0645 \\u062f\\u064a \\u0642\\u0646\\u0648\\u0627\\u062a\\u0647\\u0645 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0647 \\u062c\\u0631\\u064a\\u062f\\u064a \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0647 \\u0645\\u0633\\u062a\\u0634\\u0641\\u0649 \\u0627\\u0644\\u0641\\u0627\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0631\\u0648\\u0633\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0635\\u064a\\u0646\\u064a\\u0629 \\u0648\\u062d\\u0632\\u0628 \\u0627\\u0644\\u0644\\u0647 \\u0647\\u0644 \\u062a\\u0639\\u0644\\u0645 \\u0645\\u0646 \\u0645\\u0627\\u062a \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0627\\u0646\\u0627 \\u0628\\u062f\\u064a \\u0627\\u0639\\u0637\\u0649 \\u0636\\u062d\\u0643 \\u064a\\u0627 \\u0633\\u0644\\u0645\\u064a \\u064a\\u0627 \\u0627\\u062e\\u064a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0645\\u0627\\u0634\\u064a \\u0645\\u0627\\u0634\\u064a \\u0627\\u0644\\u0644\\u064a \\u0628\\u062f\\u0643 \\u064a\\u0639\\u0646\\u064a \\u0632\\u0628\\u062d\\u062a\\u0648 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0648\\u0642\\u0627\\u0644\\u0648 \\u062c\\u0627\\u064a\\u064a\\u0646 \\u064a\\u0648\\u0632\\u0639\\u0648 \\u064a\\u0627 \\u0633\\u0644\\u0645\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0628\\u062d\\u0627\\u062c\\u0629 \\u0644\\u064a \\u0644\\u0627\\u0630\\u0646 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0648\\u0627\\u064a \\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0627\\u0644\\u062c\\u0648\\u064a\\u0629 \\u0628\\u0631\\u0628\\u0643 \\u0645\\u0627\\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0627\\u0644 \\u0645\\u0627\\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0627\\u0644 \\u0645\\u0627\\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0627\\u0644 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0628\\u062f\\u0648 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0632\\u0628\\u062d\\u062a\\u0648 \\u0627\\u0644\\u0627\\u0645\\u064a \\u0635\\u0627\\u0631\\u0648\\u0627 \\u0639\\u064a\\u0646\\u0648 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0639\\u064a\\u0646\\u0648 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0641\\u064a \\u0627\\u0644\\u0627\\u062e\\u0644\\u0627\\u0642 \\u0627\\u0644\\u0644\\u064a \\u0647\\u0648 \\u0639\\u0632 \\u0627\\u0644\\u062f\\u064a\\u0645\\u0642\\u0631\\u0627\\u0637\\u064a\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0648\\u062a\\u0642\\u0641 \\u0645\\u0639\\u064a \\u0634\\u0648 \\u0631\\u0627\\u064a\\u0643 \\u0627\\u0644\\u0627\\u0646\\u0638\\u0645\\u0629 \\u0627\\u0644\\u0642\\u0648\\u0645\\u062c\\u064a\\u0629 \\u0627\\u0644\\u0645\\u062d\\u0627\\u0635\\u0631\\u0629 \\u0628\\u0627\\u0644\\u062b\\u0648\\u0631\\u0627\\u062a \\u0645\\u0633\\u062a\\u0639\\u062f\\u0629 \\u062a\\u062f\\u0641\\u0639 \\u0627\\u0644\\u0645\\u0644\\u0627\\u064a\\u064a\\u0646 \\u0648\\u0627\\u0633\\u0623\\u0644\\u0647\\u0645 \\u062c\\u0631\\u0628\\u0648\\u0627 \\u0644\\u0627 \\u062a\\u0633\\u0623\\u0644 \\u062d\\u0643\\u064a\\u0645 \\u064a\\u0639\\u0646\\u064a \\u0628\\u062f\\u0643 \\u0627\\u0644\\u0641 \\u0633\\u0646\\u0629 \\u0628\\u0627\\u0644\\u062e\\u0644\\u064a\\u062c \\u0644\\u062a\\u0637\\u0627\\u0644\\u0639 \\u0631\\u0628\\u0639\\u0646 \\u0627\\u0644\\u0644\\u064a \\u0628\\u064a\\u062f\\u0631\\u064a \\u0628\\u064a\\u062f\\u0631\\u064a \\u0627\\u0631\\u062c\\u0648\\u0643 \\u062a\\u0633\\u0643\\u062a\\u0631 \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0646\\u062a\\u0648 \\u0627\\u0644\\u0642\\u0648\\u0645\\u064a\\u064a\\u0646 \\u0647\\u062f\\u0648\\u0644 \\u0627\\u0644\\u0635\\u0631\\u0627\\u0645\\u064a \\u0635\\u0648\\u062a\\u0648 \\u0634\\u063a\\u0644 \\u064a\\u0639\\u0646\\u064a \\u062d\\u0627\\u062c\\u064a \\u0639\\u0631\\u0628 \\u062c\\u0627\\u064a \\u064a\\u0648\\u0632\\u0639 \\u062c\\u0647\\u0627\\u062f\\u0627\\u062a \\u062d\\u0633\\u0646 \\u0633\\u0644\\u0648\\u0643 \\u0628\\u0627\\u062d\\u062b\\u064a\\u0646 \\u062c\\u0627\\u064a \\u064a\\u0648\\u0632\\u0639"}], "max_tokens": 500, "temperature": 0.3}' message='Post details'
+INFO 2025-07-03 00:36:41,639 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 00:36:42,650 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=2954 request_id=req_a866da84be230072ad0bfac91ddb4e5d response_code=200
+INFO 2025-07-03 00:36:42,671 tasks Meeting 12 processing completed successfully.
+INFO 2025-07-03 00:36:46,652 basehttp "GET /ar/audio/check_status/12/ HTTP/1.1" 200 45
+INFO 2025-07-03 00:36:48,180 basehttp "GET /ar/audio/status/12/ HTTP/1.1" 200 6817
+INFO 2025-07-03 00:36:50,956 basehttp "GET /ar/transcription/view/12/ HTTP/1.1" 200 16793
+INFO 2025-07-03 00:37:06,123 basehttp - Broken pipe from ('127.0.0.1', 52288)
+WARNING 2025-07-03 00:37:25,483 log Not Found: /favicon.ico
+WARNING 2025-07-03 00:37:25,484 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 00:37:25,540 basehttp "GET /media/meeting_audio/meeting1_hJXtbYu.mp3 HTTP/1.1" 200 4352450
+INFO 2025-07-03 16:03:01,651 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:14:01,538 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/core/admin.py changed, reloading.
+INFO 2025-07-03 16:14:03,606 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:14:24,315 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/speaker_identification/admin.py changed, reloading.
+INFO 2025-07-03 16:14:25,783 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:14:48,925 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/transcription/admin.py changed, reloading.
+INFO 2025-07-03 16:14:50,209 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:15:20,467 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/admin.py changed, reloading.
+INFO 2025-07-03 16:15:21,640 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:15:37,767 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/business_logic/admin.py changed, reloading.
+INFO 2025-07-03 16:15:38,970 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:16:20,107 basehttp "GET /admin HTTP/1.1" 302 0
+INFO 2025-07-03 16:16:20,163 basehttp "GET /ar/admin/ HTTP/1.1" 200 9072
+INFO 2025-07-03 16:16:20,223 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-07-03 16:16:20,224 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-07-03 16:16:20,225 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-07-03 16:16:20,226 basehttp "GET /static/admin/css/rtl.css HTTP/1.1" 200 4694
+INFO 2025-07-03 16:16:20,227 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-07-03 16:16:20,227 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18557
+INFO 2025-07-03 16:16:20,237 basehttp "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+INFO 2025-07-03 16:16:20,240 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-07-03 16:16:20,241 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-07-03 16:16:20,248 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-07-03 16:16:20,249 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+WARNING 2025-07-03 16:16:21,246 log Not Found: /favicon.ico
+WARNING 2025-07-03 16:16:21,247 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 16:16:23,005 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 18467
+INFO 2025-07-03 16:16:23,033 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6584
+INFO 2025-07-03 16:16:23,035 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-03 16:16:23,037 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2025-07-03 16:16:23,040 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2025-07-03 16:16:23,043 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-07-03 16:16:23,044 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-03 16:16:23,048 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-03 16:16:23,057 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:16:23,059 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-07-03 16:16:23,060 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-07-03 16:16:23,066 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2025-07-03 16:16:23,067 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-07-03 16:16:23,079 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-07-03 16:16:23,094 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-07-03 16:16:33,849 basehttp "GET /ar/admin/speaker_identification/speaker/1/change/ HTTP/1.1" 200 15457
+INFO 2025-07-03 16:16:33,865 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-07-03 16:16:33,866 basehttp "GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+INFO 2025-07-03 16:16:33,871 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8953
+INFO 2025-07-03 16:16:33,872 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:16:33,887 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-07-03 16:16:33,887 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11952
+INFO 2025-07-03 16:16:46,185 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 21282
+INFO 2025-07-03 16:16:46,210 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-07-03 16:16:46,212 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:16:49,340 basehttp "GET /ar/admin/transcription/meeting/12/change/ HTTP/1.1" 200 35899
+INFO 2025-07-03 16:16:49,357 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-07-03 16:16:49,357 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2025-07-03 16:16:49,357 basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-07-03 16:16:49,358 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-07-03 16:16:49,363 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:16:49,372 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-07-03 16:16:49,449 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-07-03 16:17:11,839 basehttp "GET /ar/admin/transcription/meetingreport/ HTTP/1.1" 200 15975
+INFO 2025-07-03 16:17:11,867 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:17:14,497 basehttp "GET /ar/admin/transcription/meetingreport/6/change/ HTTP/1.1" 200 15728
+INFO 2025-07-03 16:17:14,519 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:17:18,668 basehttp "GET /ar/admin/transcription/transcriptsegment/ HTTP/1.1" 200 56772
+INFO 2025-07-03 16:17:18,697 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:17:18,716 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-07-03 16:17:34,965 basehttp "GET /ar/admin/transcription/transcriptsegment/39/change/ HTTP/1.1" 200 23565
+INFO 2025-07-03 16:17:35,004 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:17:48,797 basehttp "GET /admin/checkout/paymentmethod/2/change/ HTTP/1.1" 302 0
+INFO 2025-07-03 16:17:48,841 basehttp "GET /en/admin/checkout/paymentmethod/2/change/ HTTP/1.1" 302 0
+INFO 2025-07-03 16:17:48,865 basehttp "GET /en/admin/login/?next=/en/admin/checkout/paymentmethod/2/change/ HTTP/1.1" 200 4258
+INFO 2025-07-03 16:17:49,165 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+INFO 2025-07-03 16:17:49,186 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-07-03 16:17:49,188 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-07-03 16:17:49,189 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-07-03 16:17:49,189 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-07-03 16:17:49,190 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18557
+INFO 2025-07-03 16:17:49,191 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+WARNING 2025-07-03 16:17:49,316 log Not Found: /apple-touch-icon-precomposed.png
+WARNING 2025-07-03 16:17:49,316 basehttp "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2572
+WARNING 2025-07-03 16:17:49,494 log Not Found: /apple-touch-icon.png
+WARNING 2025-07-03 16:17:49,494 basehttp "GET /apple-touch-icon.png HTTP/1.1" 404 2536
+INFO 2025-07-03 16:18:01,383 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 18467
+INFO 2025-07-03 16:18:01,410 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:21:53,386 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 18467
+INFO 2025-07-03 16:21:53,426 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:44:48,479 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:47:12,635 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:47:36,530 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:49:35,688 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:51:12,535 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 16:51:14,394 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:52:29,066 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 16:52:30,829 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:52:34,338 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 16:52:50,664 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14359
+INFO 2025-07-03 16:52:50,694 basehttp "GET /static/css/rtl.css HTTP/1.1" 304 0
+INFO 2025-07-03 16:52:50,694 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0
+INFO 2025-07-03 16:52:50,696 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+WARNING 2025-07-03 16:52:50,924 log Not Found: /favicon.ico
+WARNING 2025-07-03 16:52:50,925 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 16:52:51,920 basehttp "GET /ar/dashboard/ HTTP/1.1" 200 14359
+INFO 2025-07-03 16:52:54,771 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 16:53:14,239 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-03 16:53:14,240 tasks Processing meeting 13 with SPEAKER RECOGNITION
+INFO 2025-07-03 16:53:14,240 tasks Starting real processing with speaker recognition for meeting 13
+INFO 2025-07-03 16:53:14,241 tasks Converting and enhancing audio...
+INFO 2025-07-03 16:53:14,252 basehttp "GET /ar/audio/status/13/ HTTP/1.1" 200 12619
+INFO 2025-07-03 16:53:14,319 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:19,511 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:24,630 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:24,636 tasks Step 1: Speaker diarization and identification...
+INFO 2025-07-03 16:53:25,113 tasks Step 2: Transcribing with Whisper...
+DEBUG 2025-07-03 16:53:25,163 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 16:53:25,163 util api_version=None data="{'model': 'whisper-1', 'language': 'ar'}" message='Post details'
+INFO 2025-07-03 16:53:29,643 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:34,654 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:39,664 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:44,674 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:49,686 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:54,696 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:53:59,706 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 16:54:02,648 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=31976 request_id=req_c4d91834d197a3d7a11b8b81bff8e910 response_code=200
+INFO 2025-07-03 16:54:02,649 tasks Step 3: Merging transcription with speaker identification...
+ERROR 2025-07-03 16:54:02,649 tasks Error in speaker recognition processing: 'speaker'
+INFO 2025-07-03 16:54:02,649 tasks Falling back to text-based speaker identification...
+INFO 2025-07-03 16:54:02,649 tasks Starting real processing for meeting 13
+INFO 2025-07-03 16:54:02,650 tasks Converting and enhancing audio...
+INFO 2025-07-03 16:54:04,857 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:09,971 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:11,419 tasks Transcribing with Whisper...
+DEBUG 2025-07-03 16:54:11,419 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 16:54:11,420 util api_version=None data="{'model': 'whisper-1', 'language': 'ar'}" message='Post details'
+INFO 2025-07-03 16:54:14,982 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:19,991 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:25,002 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:30,012 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:35,022 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 16:54:39,096 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=23259 request_id=req_5d071e10ace872cfb1b2e97362e81d7d response_code=200
+INFO 2025-07-03 16:54:39,097 tasks Enhancing transcript and identifying speakers...
+DEBUG 2025-07-03 16:54:39,098 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 16:54:39,098 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0623\\u0646\\u062a \\u0645\\u0633\\u0627\\u0639\\u062f \\u0645\\u062a\\u062e\\u0635\\u0635 \\u0641\\u064a \\u062a\\u062d\\u0644\\u064a\\u0644 \\u0645\\u062d\\u0627\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639\\u0627\\u062a.\\n                        \\u0645\\u0647\\u0645\\u062a\\u0643: \\u062a\\u062d\\u062f\\u064a\\u062f \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0641\\u064a \\u0627\\u0644\\u0646\\u0635.\\n                        \\u0627\\u0628\\u062d\\u062b \\u0639\\u0646:\\n                        1. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u0627\\u0644\\u062a\\u0639\\u0631\\u064a\\u0641 \\u0628\\u0627\\u0644\\u0646\\u0641\\u0633 (\\u0623\\u0646\\u0627 \\u0641\\u0644\\u0627\\u0646\\u060c \\u0645\\u0639\\u0643\\u0645 \\u0641\\u0644\\u0627\\u0646)\\n                        2. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u062a\\u063a\\u064a\\u064a\\u0631 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b (\\u0623\\u0639\\u0637\\u064a \\u0627\\u0644\\u0643\\u0644\\u0645\\u0629 \\u0644\\u0640\\u060c \\u0634\\u0643\\u0631\\u0627\\u064b)\\n                        3. \\u0627\\u0644\\u0623\\u0633\\u0645\\u0627\\u0621 \\u0648\\u0627\\u0644\\u0645\\u0646\\u0627\\u0635\\u0628\\n\\n                        \\u0623\\u0631\\u062c\\u0639 \\u0642\\u0627\\u0626\\u0645\\u0629 \\u0628\\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0648\\u0645\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0647."}, {"role": "user", "content": "\\u062d\\u0644\\u0644 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0646\\u0635 \\u0648\\u062d\\u062f\\u062f \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646:\\n\\u0648\\u0643\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0627\\u062e\\u064a \\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0634\\u0627\\u0648\\u0628\\u0647 \\u0628\\u0639\\u062f\\u064a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0627\\u062e\\u064a\\u0644\\u0646\\u0627 \\u0627\\u062c\\u0627\\u0648\\u0628\\u0647 \\u0645\\u0627 \\u0639\\u0634 \\u0641\\u064a\\u0647 \\u0648\\u0644\\u0627 \\u0645\\u0642\\u0627\\u0628\\u0644\\u0629 \\u0627\\u0634\\u0631\\u062d \\u0644\\u0643 \\u0627\\u0644\\u0645\\u0642\\u0627\\u0648\\u0645\\u0629 \\u0627\\u0644\\u0645\\u0627\\u0646\\u0639\\u0629 \\u0647\\u0630\\u0627 \\u0646\\u0638\\u0627\\u0645 \\u0645\\u0642\\u0627\\u0648\\u0645\\u0629 \\u0645\\u0627\\u0646\\u0639\\u0629 \\u0627\\u0631\\u062a\\u0643\\u0628 \\u0628\\u0634\\u0639\\u0628\\u064a \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a \\u0646\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0648\\u062b\\u0645 \\u0646\\u0639\\u0648\\u062f \\u0627\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0627\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u062b\\u0627\\u0646\\u064a \\u0648\\u062d\\u062f\\u0647 \\u0648\\u0633\\u0646\\u0639\\u0648\\u062f \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0646\\u0641\\u0647\\u0645 \\u0639\\u0644\\u064a\\u0646\\u0627 \\u0627\\u0646\\u062a\\u064a \\u0643\\u0645\\u0627\\u0646 \\u0627\\u0646\\u0641\\u0647\\u0645 \\u0639\\u0644\\u064a\\u0646\\u0627 \\u0627\\u0646\\u062a\\u064a \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0648\\u0642\\u0648\\u0645\\u0629 \\u062c\\u064a \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0646\\u0627 \\u0645\\u0627 \\u0627\\u062d\\u062f\\u062b\\u0643 \\u0627\\u0646\\u0627 \\u0639\\u0627\\u064a\\u0634\\u062a \\u0643\\u0644 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0643 \\u0627\\u0646\\u0627 \\u0627\\u0628\\u0646 \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a\\u0629 \\u0628\\u0633\\u0631\\u0639\\u0629 \\u0634\\u0648\\u064a \\u0645\\u0634 \\u062c\\u0627\\u064a \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0642\\u0645\\u0631 \\u062a\\u0641\\u062a\\u0631\\u0648\\u0646 \\u0648\\u062a\\u0643\\u0630\\u0628\\u0648\\u0646 \\u0628\\u0633\\u0631\\u0639\\u0629 \\u0634\\u0648\\u064a \\u0646\\u0638\\u0627\\u0645 \\u0627\\u0644\\u0645\\u0642\\u0627\\u0648\\u0645\\u0629 \\u0627\\u0644\\u0645\\u0627\\u0646\\u0639\\u0629 \\u0627\\u0631\\u062c\\u0639 \\u0627\\u0631\\u062c\\u0639 \\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0645\\u0639\\u0647 \\u0648\\u062a\\u062f\\u0645\\u0631\\u0648\\u0627 \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0648\\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0645\\u0639\\u0647 \\u0648\\u062a\\u062f\\u0645\\u0631\\u0648\\u0627 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0647\\u0645 \\u064a\\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0645\\u0639 \\u0627\\u0644\\u0627\\u0645\\u0628\\u0631\\u064a\\u0627\\u0644\\u064a\\u062c\\u064a \\u0628\\u0637\\u0631\\u064a\\u0642\\u0629 \\u0644\\u064a\\u0633\\u062a \\u0642\\u0637\\u0639\\u0629 \\u0627\\u0646\\u062a \\u0645\\u0639\\u0647 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0637\\u0644\\u0628\\u062a \\u0645\\u0646\\u0643 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0637\\u0644\\u0628\\u062a \\u0645\\u0646\\u0643 \\u0648\\u0633\\u062a\\u0635\\u062f\\u0631 \\u0641\\u062a\\u0648\\u0649 \\u0642\\u062f\\u0645 \\u0628\\u0625\\u062c\\u0627\\u0632\\u062a\\u064a \\u062a\\u062f\\u0645\\u064a\\u0631 \\u0643\\u0644 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0633\\u0645\\u0639 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062e\\u0644\\u064a\\u0646\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0645\\u0646 \\u0634\\u0623\\u0646 \\u0627\\u0644\\u0644\\u0647 \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0632\\u064a\\u0646 \\u0627\\u0644\\u0639\\u0628\\u062f\\u064a\\u0646 \\u0628\\u0646 \\u0639\\u0644\\u064a \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0627\\u0644\\u0642\\u0630\\u0627\\u0641\\u064a \\u062a\\u062e\\u0632\\u0646 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646 \\u0628\\u0631\\u0628\\u0643 \\u0627\\u0644\\u0627 \\u062a\\u062e\\u062c\\u0644\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0646\\u0641\\u0633\\u0643\\u0645 \\u0627\\u0646 \\u062a\\u0630\\u0647\\u0628\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u0639\\u0633\\u0643\\u0631 \\u0627\\u0644\\u0642\\u0648\\u0645\\u064a \\u0644\\u0639\\u0646\\u062f \\u0645\\u0644\\u0627\\u0644\\u064a \\u0637\\u0647\\u0631\\u0627\\u0646 \\u064a\\u0642\\u062a\\u0644\\u0648\\u0646 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0645\\u0627\\u0630\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0627 \\u0628\\u0627\\u0644\\u0627\\u0645\\u0633 \\u0646\\u062d\\u0646 \\u0645\\u0634\\u0627\\u0631\\u0643\\u0648\\u0646 \\u0648\\u0646\\u0631\\u064a\\u062f \\u0627\\u0646 \\u0646\\u0633\\u062d\\u0642 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0644\\u0645\\u0634\\u0627\\u0647\\u062f \\u0639\\u0646 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0645\\u0633\\u062a\\u0648\\u0649 \\u0627\\u0644\\u0647\\u0627\\u0628\\u0637 \\u0641\\u0636\\u0644 \\u0641\\u0636\\u0644 \\u062c\\u0627\\u0648\\u0628\\u0646\\u064a \\u0639\\u0644\\u0649 \\u0633\\u0624\\u0627\\u0644\\u064a \\u0647\\u0630\\u0627 \\u0644\\u0623\\u0633\\u0645\\u0627\\u0621 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u064a \\u0627\\u0644\\u0642\\u0648\\u0645 \\u062c\\u064a\\u0646 \\u064a\\u0642\\u0648\\u0644\\u0648\\u0646 \\u0643\\u0627\\u0644\\u0639\\u0627\\u0647\\u0631\\u0629 \\u0627\\u0644\\u062a\\u064a \\u062a\\u062d\\u0627\\u0636\\u0631 \\u0641\\u064a \\u0627\\u0644\\u0634\\u0631\\u0641 \\u0630\\u0628\\u062d\\u062a \\u0627\\u0644\\u0623\\u0645 \\u0644\\u0627 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u064a \\u0644\\u0645 \\u0646\\u0634\\u0627\\u0631\\u0643 \\u0645\\u0639\\u0647\\u0645 \\u0644\\u0645 \\u0646\\u0634\\u0627\\u0631\\u0643 \\u0645\\u0639\\u0647\\u0645 \\u0646\\u062d\\u0646 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0644\\u062f\\u064a\\u0646\\u0627 \\u0645\\u0644\\u064a\\u0648\\u0646 \\u0634\\u0639\\u0628 \\u0627\\u0646\\u062a \\u0644\\u0627 \\u0633\\u062a\\u0641\\u0647\\u0645 \\u0648\\u0644\\u0627 \\u0627\\u0644\\u0644\\u0647 \\u064a\\u0641\\u0647\\u0645\\u0643 \\u0644\\u0627 \\u0644\\u064a\\u0633 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0633\\u0643\\u062a \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0648\\u0646 \\u0648\\u0627\\u0644\\u0644\\u0647 \\u0627\\u0644\\u0639\\u0638\\u064a\\u0645 \\u0627\\u0641\\u0647\\u0645 \\u0627\\u0641\\u0647\\u0645 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0648\\u0646 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0646\\u0627 \\u0645\\u062f\\u064a\\u0631 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0633\\u0643\\u062a \\u0644\\u064a\\u0633 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0627\\u0633\\u0643\\u062a \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u0628\\u062d\\u0642 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u064a\\u0627 \\u0627\\u0644\\u0644\\u0647 \\u062e\\u0644\\u0635 \\u0627\\u0644\\u0648\\u0642\\u062a \\u0648\\u0627\\u0646\\u062a\\u064a \\u0628\\u062a\\u0628\\u0643\\u064a \\u0633\\u062a\\u0648\\u0635\\u0644\\u0648\\u0647\\u0627 \\u0627\\u0644\\u0649 \\u0627\\u0637\\u0631\\u0627\\u0641 \\u0648\\u0635\\u0644\\u062a \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0631\\u0633\\u0627\\u0644\\u0629 \\u0643\\u0644\\u0647\\u0645 \\u0628\\u064a\\u0634\\u062a\\u063a\\u0644\\u0648 \\u0639\\u0646\\u062f\\u0647\\u0645 \\u062f\\u064a \\u0642\\u0646\\u0648\\u0627\\u062a\\u0647\\u0645 \\u0627\\u0644\\u0644\\u064a \\u0645\\u0633\\u062a\\u0634\\u0627\\u0631 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0646\\u0647 \\u0642\\u0646\\u0627\\u0629 \\u0641\\u0636\\u0627\\u0626\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0646\\u0647 \\u062c\\u0631\\u064a\\u062f\\u0629 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0645\\u062c\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0646\\u0647 \\u0645\\u0633\\u062a\\u0634\\u0641\\u0649 \\u0627\\u0644\\u0641\\u0627\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0631\\u0648\\u0633\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0635\\u064a\\u0646\\u064a\\u0629 \\u0648\\u062d\\u0632\\u0628 \\u0627\\u0644\\u0644\\u0647 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0647\\u0644 \\u062a\\u0639\\u0644\\u0645 \\u0645\\u0646 \\u0645\\u0627\\u062a \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0633\\u064a\\u0631\\u064a\\u0648 \\u0645\\u0627 \\u0628\\u0639\\u0631\\u0641 \\u0634\\u0648 \\u064a\\u0639\\u0644\\u0645\\u064a\\u0646 \\u0639\\u0645 \\u062a\\u0636\\u062d\\u0643 \\u064a\\u0627 \\u0632\\u0644\\u0645\\u0629 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0645\\u0627\\u0634\\u064a \\u0645\\u0627\\u0634\\u064a \\u0627\\u0644\\u0644\\u064a \\u0628\\u062f\\u0643 \\u0632\\u0628\\u062d\\u062a\\u0648\\u0627 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0648\\u0642\\u0627\\u0644\\u0648\\u0627 \\u062c\\u0627\\u064a\\u064a\\u0646 \\u064a\\u0648\\u0632\\u0639\\u0648\\u0627 \\u064a\\u0639\\u0646\\u064a \\u0646\\u0628\\u062a \\u0627\\u0644\\u0622\\u0647\\u0631\\u0629 \\u0627\\u0644\\u0644\\u064a \\u0643\\u0646\\u062a\\u0648\\u0627 \\u062d\\u0627\\u0636\\u0631 \\u0641\\u064a \\u0627\\u0644\\u0634\\u0631\\u0642 \\u064a\\u0627 \\u0632\\u0644\\u0645\\u0629 \\u0647\\u0644 \\u062a\\u0639\\u0644\\u0645 \\u0627\\u0646 \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0628\\u062d\\u0627\\u062c\\u0629 \\u0644\\u064a \\u0644\\u062d\\u062f\\u0627 \\u0644\\u0625\\u0630\\u0646 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0648\\u0627\\u064a \\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0627\\u0644\\u062c\\u0648\\u064a\\u0629 \\u0628\\u0631\\u0628\\u0643 \\u0645\\u0627 \\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0648\\u0643\\u064a\\u0643\\u064a \\u0627\\u0646\\u0627 \\u0645\\u0646 \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0645\\u0627 \\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0645\\u0627 \\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0632\\u0628\\u062d\\u062a\\u0648\\u0627 \\u0627\\u0644\\u0627\\u0645\\u064a \\u0641\\u0636\\u0644 \\u0635\\u0627\\u0631\\u0648\\u0627 \\u0639\\u064a\\u0646\\u0648\\u0627 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0635\\u0627\\u0631\\u0648\\u0627 \\u0639\\u064a\\u0646\\u0648\\u0627 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0641\\u064a \\u0627\\u0644\\u0623\\u062e\\u0644\\u0627\\u0642 \\u0627\\u0644\\u0644\\u064a \\u0647\\u0648 \\u0639\\u0632"}], "max_tokens": 1000, "temperature": 0.3}' message='Post details'
+INFO 2025-07-03 16:54:40,033 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:45,043 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:50,052 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:54:55,062 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 16:54:55,077 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13810 request_id=req_a05a3f2dce4f8a59749d0428eab0693c response_code=200
+INFO 2025-07-03 16:54:55,084 tasks Extracting decisions and tasks...
+DEBUG 2025-07-03 16:54:55,084 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 16:54:55,084 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0627\\u0633\\u062a\\u062e\\u0631\\u062c \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a \\u0648\\u0627\\u0644\\u0645\\u0647\\u0627\\u0645 \\u0645\\u0646 \\u0645\\u062d\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639.\\n                    \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a: \\u0645\\u0627 \\u062a\\u0645 \\u0627\\u0644\\u0645\\u0648\\u0627\\u0641\\u0642\\u0629 \\u0639\\u0644\\u064a\\u0647 \\u0623\\u0648 \\u0631\\u0641\\u0636\\u0647\\n                    \\u0627\\u0644\\u0645\\u0647\\u0627\\u0645: \\u0645\\u0627 \\u062a\\u0645 \\u062a\\u0643\\u0644\\u064a\\u0641 \\u0634\\u062e\\u0635 \\u0628\\u0647\\n                    \\u0627\\u0630\\u0643\\u0631 \\u0627\\u0633\\u0645 \\u0627\\u0644\\u0645\\u0633\\u0624\\u0648\\u0644 \\u0639\\u0646 \\u0643\\u0644 \\u0645\\u0647\\u0645\\u0629."}, {"role": "user", "content": "\\u0627\\u0633\\u062a\\u062e\\u0631\\u062c \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a \\u0648\\u0627\\u0644\\u0645\\u0647\\u0627\\u0645:\\n\\u0648\\u0643\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0627\\u062e\\u064a \\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0648\\u0634\\u0627\\u0648\\u0628\\u0647 \\u0628\\u0639\\u062f\\u064a \\u0633\\u062c\\u0644 \\u0639\\u0646\\u062f\\u0643 \\u0627\\u062e\\u064a\\u0644\\u0646\\u0627 \\u0627\\u062c\\u0627\\u0648\\u0628\\u0647 \\u0645\\u0627 \\u0639\\u0634 \\u0641\\u064a\\u0647 \\u0648\\u0644\\u0627 \\u0645\\u0642\\u0627\\u0628\\u0644\\u0629 \\u0627\\u0634\\u0631\\u062d \\u0644\\u0643 \\u0627\\u0644\\u0645\\u0642\\u0627\\u0648\\u0645\\u0629 \\u0627\\u0644\\u0645\\u0627\\u0646\\u0639\\u0629 \\u0647\\u0630\\u0627 \\u0646\\u0638\\u0627\\u0645 \\u0645\\u0642\\u0627\\u0648\\u0645\\u0629 \\u0645\\u0627\\u0646\\u0639\\u0629 \\u0627\\u0631\\u062a\\u0643\\u0628 \\u0628\\u0634\\u0639\\u0628\\u064a \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a \\u0646\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0648\\u062b\\u0645 \\u0646\\u0639\\u0648\\u062f \\u0627\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u0627\\u0648\\u0642\\u0641 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u062b\\u0627\\u0646\\u064a \\u0648\\u062d\\u062f\\u0647 \\u0648\\u0633\\u0646\\u0639\\u0648\\u062f \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0646\\u0641\\u0647\\u0645 \\u0639\\u0644\\u064a\\u0646\\u0627 \\u0627\\u0646\\u062a\\u064a \\u0643\\u0645\\u0627\\u0646 \\u0627\\u0646\\u0641\\u0647\\u0645 \\u0639\\u0644\\u064a\\u0646\\u0627 \\u0627\\u0646\\u062a\\u064a \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0648\\u0642\\u0648\\u0645\\u0629 \\u062c\\u064a \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0646\\u0627 \\u0645\\u0627 \\u0627\\u062d\\u062f\\u062b\\u0643 \\u0627\\u0646\\u0627 \\u0639\\u0627\\u064a\\u0634\\u062a \\u0643\\u0644 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0643 \\u0627\\u0646\\u0627 \\u0627\\u0628\\u0646 \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0641\\u0644\\u0633\\u0637\\u064a\\u0646\\u064a\\u0629 \\u0628\\u0633\\u0631\\u0639\\u0629 \\u0634\\u0648\\u064a \\u0645\\u0634 \\u062c\\u0627\\u064a \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0642\\u0645\\u0631 \\u062a\\u0641\\u062a\\u0631\\u0648\\u0646 \\u0648\\u062a\\u0643\\u0630\\u0628\\u0648\\u0646 \\u0628\\u0633\\u0631\\u0639\\u0629 \\u0634\\u0648\\u064a \\u0646\\u0638\\u0627\\u0645 \\u0627\\u0644\\u0645\\u0642\\u0627\\u0648\\u0645\\u0629 \\u0627\\u0644\\u0645\\u0627\\u0646\\u0639\\u0629 \\u0627\\u0631\\u062c\\u0639 \\u0627\\u0631\\u062c\\u0639 \\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0645\\u0639\\u0647 \\u0648\\u062a\\u062f\\u0645\\u0631\\u0648\\u0627 \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0648\\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0645\\u0639\\u0647 \\u0648\\u062a\\u062f\\u0645\\u0631\\u0648\\u0627 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0647\\u0645 \\u064a\\u062a\\u062d\\u0627\\u0644\\u0641\\u0648\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0645\\u0639 \\u0627\\u0644\\u0627\\u0645\\u0628\\u0631\\u064a\\u0627\\u0644\\u064a\\u062c\\u064a \\u0628\\u0637\\u0631\\u064a\\u0642\\u0629 \\u0644\\u064a\\u0633\\u062a \\u0642\\u0637\\u0639\\u0629 \\u0627\\u0646\\u062a \\u0645\\u0639\\u0647 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0637\\u0644\\u0628\\u062a \\u0645\\u0646\\u0643 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0637\\u0644\\u0628\\u062a \\u0645\\u0646\\u0643 \\u0648\\u0633\\u062a\\u0635\\u062f\\u0631 \\u0641\\u062a\\u0648\\u0649 \\u0642\\u062f\\u0645 \\u0628\\u0625\\u062c\\u0627\\u0632\\u062a\\u064a \\u062a\\u062f\\u0645\\u064a\\u0631 \\u0643\\u0644 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0627\\u0633\\u0645\\u0639 \\u0627\\u0633\\u0645\\u0639 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062e\\u0644\\u064a\\u0646\\u064a \\u0627\\u0633\\u0623\\u0644\\u0643 \\u0645\\u0646 \\u0634\\u0623\\u0646 \\u0627\\u0644\\u0644\\u0647 \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0632\\u064a\\u0646 \\u0627\\u0644\\u0639\\u0628\\u062f\\u064a\\u0646 \\u0628\\u0646 \\u0639\\u0644\\u064a \\u0647\\u0644 \\u0627\\u0646\\u062a \\u0645\\u0639 \\u0633\\u0642\\u0648\\u0637 \\u0627\\u0644\\u0642\\u0630\\u0627\\u0641\\u064a \\u062a\\u062e\\u0632\\u0646 \\u0627\\u0644\\u0639\\u0631\\u0627\\u0642 \\u0648\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646 \\u0628\\u0631\\u0628\\u0643 \\u0627\\u0644\\u0627 \\u062a\\u062e\\u062c\\u0644\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0646\\u0641\\u0633\\u0643\\u0645 \\u0627\\u0646 \\u062a\\u0630\\u0647\\u0628\\u0648\\u0627 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u0639\\u0633\\u0643\\u0631 \\u0627\\u0644\\u0642\\u0648\\u0645\\u064a \\u0644\\u0639\\u0646\\u062f \\u0645\\u0644\\u0627\\u0644\\u064a \\u0637\\u0647\\u0631\\u0627\\u0646 \\u064a\\u0642\\u062a\\u0644\\u0648\\u0646 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0645\\u0627\\u0630\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0627 \\u0628\\u0627\\u0644\\u0627\\u0645\\u0633 \\u0646\\u062d\\u0646 \\u0645\\u0634\\u0627\\u0631\\u0643\\u0648\\u0646 \\u0648\\u0646\\u0631\\u064a\\u062f \\u0627\\u0646 \\u0646\\u0633\\u062d\\u0642 \\u0627\\u0644\\u0634\\u0639\\u0628 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a \\u0627\\u0639\\u062a\\u0630\\u0631 \\u0627\\u0644\\u0645\\u0634\\u0627\\u0647\\u062f \\u0639\\u0646 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0645\\u0633\\u062a\\u0648\\u0649 \\u0627\\u0644\\u0647\\u0627\\u0628\\u0637 \\u0641\\u0636\\u0644 \\u0641\\u0636\\u0644 \\u062c\\u0627\\u0648\\u0628\\u0646\\u064a \\u0639\\u0644\\u0649 \\u0633\\u0624\\u0627\\u0644\\u064a \\u0647\\u0630\\u0627 \\u0644\\u0623\\u0633\\u0645\\u0627\\u0621 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u064a \\u0627\\u0644\\u0642\\u0648\\u0645 \\u062c\\u064a\\u0646 \\u064a\\u0642\\u0648\\u0644\\u0648\\u0646 \\u0643\\u0627\\u0644\\u0639\\u0627\\u0647\\u0631\\u0629 \\u0627\\u0644\\u062a\\u064a \\u062a\\u062d\\u0627\\u0636\\u0631 \\u0641\\u064a \\u0627\\u0644\\u0634\\u0631\\u0641 \\u0630\\u0628\\u062d\\u062a \\u0627\\u0644\\u0623\\u0645 \\u0644\\u0627 \\u064a\\u0627 \\u0633\\u064a\\u062f\\u064a \\u0644\\u0645 \\u0646\\u0634\\u0627\\u0631\\u0643 \\u0645\\u0639\\u0647\\u0645 \\u0644\\u0645 \\u0646\\u0634\\u0627\\u0631\\u0643 \\u0645\\u0639\\u0647\\u0645 \\u0646\\u062d\\u0646 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0644\\u062f\\u064a\\u0646\\u0627 \\u0645\\u0644\\u064a\\u0648\\u0646 \\u0634\\u0639\\u0628 \\u0627\\u0646\\u062a \\u0644\\u0627 \\u0633\\u062a\\u0641\\u0647\\u0645 \\u0648\\u0644\\u0627 \\u0627\\u0644\\u0644\\u0647 \\u064a\\u0641\\u0647\\u0645\\u0643 \\u0644\\u0627 \\u0644\\u064a\\u0633 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0633\\u0643\\u062a \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0648\\u0646 \\u0648\\u0627\\u0644\\u0644\\u0647 \\u0627\\u0644\\u0639\\u0638\\u064a\\u0645 \\u0627\\u0641\\u0647\\u0645 \\u0627\\u0641\\u0647\\u0645 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0648\\u0646 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0646\\u0627 \\u0645\\u062f\\u064a\\u0631 \\u0627\\u0644\\u0628\\u0631\\u0646\\u0627\\u0645\\u062c \\u064a\\u0627 \\u0627\\u062e\\u064a \\u0627\\u0633\\u0643\\u062a \\u0644\\u064a\\u0633 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0627\\u0644\\u062d\\u0642 \\u0639\\u0644\\u064a\\u0643 \\u0627\\u0633\\u0643\\u062a \\u0627\\u0644\\u062b\\u0648\\u0631\\u0629 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u0628\\u062d\\u0642 \\u0627\\u0644\\u0633\\u0648\\u0631\\u064a\\u0629 \\u064a\\u0627 \\u0627\\u0644\\u0644\\u0647 \\u062e\\u0644\\u0635 \\u0627\\u0644\\u0648\\u0642\\u062a \\u0648\\u0627\\u0646\\u062a\\u064a \\u0628\\u062a\\u0628\\u0643\\u064a \\u0633\\u062a\\u0648\\u0635\\u0644\\u0648\\u0647\\u0627 \\u0627\\u0644\\u0649 \\u0627\\u0637\\u0631\\u0627\\u0641 \\u0648\\u0635\\u0644\\u062a \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0631\\u0633\\u0627\\u0644\\u0629 \\u0643\\u0644\\u0647\\u0645 \\u0628\\u064a\\u0634\\u062a\\u063a\\u0644\\u0648 \\u0639\\u0646\\u062f\\u0647\\u0645 \\u062f\\u064a \\u0642\\u0646\\u0648\\u0627\\u062a\\u0647\\u0645 \\u0627\\u0644\\u0644\\u064a \\u0645\\u0633\\u062a\\u0634\\u0627\\u0631 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0646\\u0647 \\u0642\\u0646\\u0627\\u0629 \\u0641\\u0636\\u0627\\u0626\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0646\\u0647 \\u062c\\u0631\\u064a\\u062f\\u0629 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0645\\u062c\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0644\\u064a \\u0639\\u0627\\u0645\\u0644\\u0646\\u0647 \\u0645\\u0633\\u062a\\u0634\\u0641\\u0649 \\u0627\\u0644\\u0641\\u0627\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0631\\u0648\\u0633\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0635\\u064a\\u0646\\u064a\\u0629 \\u0648\\u062d\\u0632\\u0628 \\u0627\\u0644\\u0644\\u0647 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0647\\u0644 \\u062a\\u0639\\u0644\\u0645 \\u0645\\u0646 \\u0645\\u0627\\u062a \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u064a\\u0648\\u0645 \\u0633\\u064a\\u0631\\u064a\\u0648 \\u0645\\u0627 \\u0628\\u0639\\u0631\\u0641 \\u0634\\u0648 \\u064a\\u0639\\u0644\\u0645\\u064a\\u0646 \\u0639\\u0645 \\u062a\\u0636\\u062d\\u0643 \\u064a\\u0627 \\u0632\\u0644\\u0645\\u0629 \\u064a\\u0627 \\u0627\\u062e\\u064a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0627\\u0644\\u0645\\u0639\\u0627\\u0631\\u0636\\u0629 \\u0645\\u0627\\u0634\\u064a \\u0645\\u0627\\u0634\\u064a \\u0627\\u0644\\u0644\\u064a \\u0628\\u062f\\u0643 \\u0632\\u0628\\u062d\\u062a\\u0648\\u0627 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0648\\u0642\\u0627\\u0644\\u0648\\u0627 \\u062c\\u0627\\u064a\\u064a\\u0646 \\u064a\\u0648\\u0632\\u0639\\u0648\\u0627 \\u064a\\u0639\\u0646\\u064a \\u0646\\u0628\\u062a \\u0627\\u0644\\u0622\\u0647\\u0631\\u0629 \\u0627\\u0644\\u0644\\u064a \\u0643\\u0646\\u062a\\u0648\\u0627 \\u062d\\u0627\\u0636\\u0631 \\u0641\\u064a \\u0627\\u0644\\u0634\\u0631\\u0642 \\u064a\\u0627 \\u0632\\u0644\\u0645\\u0629 \\u0647\\u0644 \\u062a\\u0639\\u0644\\u0645 \\u0627\\u0646 \\u0641\\u064a \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0628\\u062d\\u0627\\u062c\\u0629 \\u0644\\u064a \\u0644\\u062d\\u062f\\u0627 \\u0644\\u0625\\u0630\\u0646 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0648\\u0627\\u064a \\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0627\\u0644\\u0645\\u062e\\u0627\\u0628\\u0631\\u0627\\u062a \\u0627\\u0644\\u062c\\u0648\\u064a\\u0629 \\u0628\\u0631\\u0628\\u0643 \\u0645\\u0627 \\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0648\\u0643\\u064a\\u0643\\u064a \\u0627\\u0646\\u0627 \\u0645\\u0646 \\u0633\\u0648\\u0631\\u064a\\u0627 \\u0645\\u0627 \\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u0645\\u0627 \\u062a\\u0637\\u0627\\u0631 \\u0627\\u0644\\u0628\\u063a\\u0644 \\u062f\\u0642\\u064a\\u0642\\u0629 \\u0632\\u0628\\u062d\\u062a\\u0648\\u0627 \\u0627\\u0644\\u0627\\u0645\\u064a \\u0641\\u0636\\u0644 \\u0635\\u0627\\u0631\\u0648\\u0627 \\u0639\\u064a\\u0646\\u0648\\u0627 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0635\\u0627\\u0631\\u0648\\u0627 \\u0639\\u064a\\u0646\\u0648\\u0627 \\u0627\\u0644\\u0646\\u0627\\u0633 \\u0641\\u064a \\u0627\\u0644\\u0623\\u062e\\u0644\\u0627\\u0642 \\u0627\\u0644\\u0644\\u064a \\u0647\\u0648 \\u0639\\u0632"}], "max_tokens": 500, "temperature": 0.3}' message='Post details'
+DEBUG 2025-07-03 16:54:57,023 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=709 request_id=req_b0499911900af93d927e64db6dc5063c response_code=200
+INFO 2025-07-03 16:54:57,036 tasks Meeting 13 processing completed successfully.
+INFO 2025-07-03 16:55:00,072 basehttp "GET /ar/audio/check_status/13/ HTTP/1.1" 200 45
+INFO 2025-07-03 16:55:01,599 basehttp "GET /ar/audio/status/13/ HTTP/1.1" 200 6818
+INFO 2025-07-03 16:55:03,218 basehttp "GET /ar/transcription/view/13/ HTTP/1.1" 200 17534
+INFO 2025-07-03 16:55:03,399 basehttp "GET /media/meeting_audio/meeting1_Nx07vTL.mp3 HTTP/1.1" 200 4352450
+INFO 2025-07-03 16:55:18,375 basehttp - Broken pipe from ('127.0.0.1', 50453)
+WARNING 2025-07-03 16:56:29,713 log Not Found: /favicon.ico
+WARNING 2025-07-03 16:56:29,714 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 16:56:29,724 basehttp "GET /media/meeting_audio/meeting1_Nx07vTL.mp3 HTTP/1.1" 200 4352450
+INFO 2025-07-03 16:58:07,753 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 16:58:22,662 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-03 16:58:22,672 tasks Processing meeting 14 with SPEAKER RECOGNITION
+INFO 2025-07-03 16:58:22,672 tasks Starting real processing with speaker recognition for meeting 14
+INFO 2025-07-03 16:58:22,673 tasks Converting and enhancing audio...
+INFO 2025-07-03 16:58:22,704 basehttp "GET /ar/audio/status/14/ HTTP/1.1" 200 12611
+INFO 2025-07-03 16:58:22,759 basehttp "GET /ar/audio/check_status/14/ HTTP/1.1" 200 46
+INFO 2025-07-03 16:58:23,914 tasks Step 1: Speaker diarization and identification...
+INFO 2025-07-03 16:58:24,133 tasks Step 2: Transcribing with Whisper...
+DEBUG 2025-07-03 16:58:24,134 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 16:58:24,134 util api_version=None data="{'model': 'whisper-1', 'language': 'ar'}" message='Post details'
+INFO 2025-07-03 16:58:27,796 basehttp "GET /ar/audio/check_status/14/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 16:58:27,966 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=2287 request_id=req_a5134c5cac9d4818a997a9f065fcac33 response_code=200
+INFO 2025-07-03 16:58:27,966 tasks Step 3: Merging transcription with speaker identification...
+ERROR 2025-07-03 16:58:27,966 tasks Error in speaker recognition processing: 'speaker'
+INFO 2025-07-03 16:58:27,967 tasks Falling back to text-based speaker identification...
+INFO 2025-07-03 16:58:27,967 tasks Starting real processing for meeting 14
+INFO 2025-07-03 16:58:27,967 tasks Converting and enhancing audio...
+INFO 2025-07-03 16:58:29,108 tasks Transcribing with Whisper...
+DEBUG 2025-07-03 16:58:29,109 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 16:58:29,109 util api_version=None data="{'model': 'whisper-1', 'language': 'ar'}" message='Post details'
+INFO 2025-07-03 16:58:32,814 basehttp "GET /ar/audio/check_status/14/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 16:58:33,389 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=2599 request_id=req_a1e3632cdce03235ebf26f961aba853f response_code=200
+INFO 2025-07-03 16:58:33,390 tasks Enhancing transcript and identifying speakers...
+DEBUG 2025-07-03 16:58:33,390 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 16:58:33,391 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0623\\u0646\\u062a \\u0645\\u0633\\u0627\\u0639\\u062f \\u0645\\u062a\\u062e\\u0635\\u0635 \\u0641\\u064a \\u062a\\u062d\\u0644\\u064a\\u0644 \\u0645\\u062d\\u0627\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639\\u0627\\u062a.\\n                        \\u0645\\u0647\\u0645\\u062a\\u0643: \\u062a\\u062d\\u062f\\u064a\\u062f \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0641\\u064a \\u0627\\u0644\\u0646\\u0635.\\n                        \\u0627\\u0628\\u062d\\u062b \\u0639\\u0646:\\n                        1. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u0627\\u0644\\u062a\\u0639\\u0631\\u064a\\u0641 \\u0628\\u0627\\u0644\\u0646\\u0641\\u0633 (\\u0623\\u0646\\u0627 \\u0641\\u0644\\u0627\\u0646\\u060c \\u0645\\u0639\\u0643\\u0645 \\u0641\\u0644\\u0627\\u0646)\\n                        2. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u062a\\u063a\\u064a\\u064a\\u0631 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b (\\u0623\\u0639\\u0637\\u064a \\u0627\\u0644\\u0643\\u0644\\u0645\\u0629 \\u0644\\u0640\\u060c \\u0634\\u0643\\u0631\\u0627\\u064b)\\n                        3. \\u0627\\u0644\\u0623\\u0633\\u0645\\u0627\\u0621 \\u0648\\u0627\\u0644\\u0645\\u0646\\u0627\\u0635\\u0628\\n\\n                        \\u0623\\u0631\\u062c\\u0639 \\u0642\\u0627\\u0626\\u0645\\u0629 \\u0628\\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0648\\u0645\\u0627 \\u0642\\u0627\\u0644\\u0648\\u0647."}, {"role": "user", "content": "\\u062d\\u0644\\u0644 \\u0647\\u0630\\u0627 \\u0627\\u0644\\u0646\\u0635 \\u0648\\u062d\\u062f\\u062f \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646:\\n\\u0645\\u0627\\u0630\\u0627 \\u062a\\u0633\\u062a\\u0637\\u064a\\u0639 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u062f\\u0648\\u0644 \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0625\\u0633\\u0644\\u0627\\u0645\\u064a\\u0629 \\u0627\\u0644\\u0645\\u063a\\u0644\\u0648\\u0628\\u0629 \\u0639\\u0644\\u0649 \\u0623\\u0645\\u0631\\u0647\\u0627 \\u0648\\u0627\\u0644\\u062e\\u0644\\u064a\\u062c\\u064a\\u0629 \\u0623\\u0646 \\u062a\\u0641\\u0639\\u0644 \\u0644\\u0644\\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u0645\\u0627\\u0630\\u0627 \\u062a\\u0633\\u062a\\u0637\\u064a\\u0639 \\u0623\\u0646 \\u062a\\u0641\\u0639\\u0644 \\u0644\\u0647\\u0627 \\u0623\\u0646\\u062a \\u062a\\u0639\\u0644\\u0645 \\u0625\\u0630\\u0627 \\u0627\\u0644\\u0623\\u0645\\u0631\\u064a\\u0643\\u064a \\u062d\\u0627\\u0645\\u0644 \\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u063a\\u0636 \\u0627\\u0644\\u0646\\u0638\\u0631 \\u0623\\u0648 \\u063a\\u0636 \\u0627\\u0644\\u0637\\u0631\\u0641 \\u0639\\u0646 \\u0639\\u0646 \\u0647\\u062c\\u0645\\u0627\\u062a \\u0627\\u0644\\u062d\\u0648\\u062b\\u064a\\u0629 \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u0648\\u063a\\u0636 \\u0627\\u0644\\u0637\\u0631\\u0641 \\u0639\\u0646\\u0647\\u0627 \\u0645\\u0627\\u0630\\u0627 \\u0641\\u0639\\u0644\\u062a \\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0639\\u0646\\u062f\\u0645\\u0627 \\u0636\\u0631\\u0628\\u062a \\u0627\\u0644\\u0646\\u0627\\u0642\\u0644\\u0627\\u062a \\u0641\\u064a \\u0627\\u0644\\u0625\\u0645\\u0627\\u0631\\u0627\\u062a \\u0644\\u0645 \\u062a\\u0641\\u0639\\u0644 \\u0634\\u064a\\u0626\\u0627 \\u0645\\u0627\\u0630\\u0627 \\u0641\\u0639\\u0644\\u062a \\u0643\\u0644 \\u0645\\u0627 \\u0642\\u0644\\u062a\\u0647 \\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0625\\u0630\\u0627 \\u062a\\u0639\\u0631\\u0636\\u062a \\u0645\\u0635\\u0627\\u0644\\u062d\\u0646\\u0627 \\u0644\\u0644\\u062e\\u0637\\u0631 \\u062e\\u0633\\u0627\\u0631\\u0629"}], "max_tokens": 1000, "temperature": 0.3}' message='Post details'
+DEBUG 2025-07-03 16:58:37,927 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4184 request_id=req_b22a7c2552ef712cfabb25c92275de51 response_code=200
+INFO 2025-07-03 16:58:37,928 tasks Extracting decisions and tasks...
+DEBUG 2025-07-03 16:58:37,928 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 16:58:37,929 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0627\\u0633\\u062a\\u062e\\u0631\\u062c \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a \\u0648\\u0627\\u0644\\u0645\\u0647\\u0627\\u0645 \\u0645\\u0646 \\u0645\\u062d\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639.\\n                    \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a: \\u0645\\u0627 \\u062a\\u0645 \\u0627\\u0644\\u0645\\u0648\\u0627\\u0641\\u0642\\u0629 \\u0639\\u0644\\u064a\\u0647 \\u0623\\u0648 \\u0631\\u0641\\u0636\\u0647\\n                    \\u0627\\u0644\\u0645\\u0647\\u0627\\u0645: \\u0645\\u0627 \\u062a\\u0645 \\u062a\\u0643\\u0644\\u064a\\u0641 \\u0634\\u062e\\u0635 \\u0628\\u0647\\n                    \\u0627\\u0630\\u0643\\u0631 \\u0627\\u0633\\u0645 \\u0627\\u0644\\u0645\\u0633\\u0624\\u0648\\u0644 \\u0639\\u0646 \\u0643\\u0644 \\u0645\\u0647\\u0645\\u0629."}, {"role": "user", "content": "\\u0627\\u0633\\u062a\\u062e\\u0631\\u062c \\u0627\\u0644\\u0642\\u0631\\u0627\\u0631\\u0627\\u062a \\u0648\\u0627\\u0644\\u0645\\u0647\\u0627\\u0645:\\n\\u0645\\u0627\\u0630\\u0627 \\u062a\\u0633\\u062a\\u0637\\u064a\\u0639 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u062f\\u0648\\u0644 \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0625\\u0633\\u0644\\u0627\\u0645\\u064a\\u0629 \\u0627\\u0644\\u0645\\u063a\\u0644\\u0648\\u0628\\u0629 \\u0639\\u0644\\u0649 \\u0623\\u0645\\u0631\\u0647\\u0627 \\u0648\\u0627\\u0644\\u062e\\u0644\\u064a\\u062c\\u064a\\u0629 \\u0623\\u0646 \\u062a\\u0641\\u0639\\u0644 \\u0644\\u0644\\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u0645\\u0627\\u0630\\u0627 \\u062a\\u0633\\u062a\\u0637\\u064a\\u0639 \\u0623\\u0646 \\u062a\\u0641\\u0639\\u0644 \\u0644\\u0647\\u0627 \\u0623\\u0646\\u062a \\u062a\\u0639\\u0644\\u0645 \\u0625\\u0630\\u0627 \\u0627\\u0644\\u0623\\u0645\\u0631\\u064a\\u0643\\u064a \\u062d\\u0627\\u0645\\u0644 \\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u063a\\u0636 \\u0627\\u0644\\u0646\\u0638\\u0631 \\u0623\\u0648 \\u063a\\u0636 \\u0627\\u0644\\u0637\\u0631\\u0641 \\u0639\\u0646 \\u0639\\u0646 \\u0647\\u062c\\u0645\\u0627\\u062a \\u0627\\u0644\\u062d\\u0648\\u062b\\u064a\\u0629 \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u0648\\u063a\\u0636 \\u0627\\u0644\\u0637\\u0631\\u0641 \\u0639\\u0646\\u0647\\u0627 \\u0645\\u0627\\u0630\\u0627 \\u0641\\u0639\\u0644\\u062a \\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0639\\u0646\\u062f\\u0645\\u0627 \\u0636\\u0631\\u0628\\u062a \\u0627\\u0644\\u0646\\u0627\\u0642\\u0644\\u0627\\u062a \\u0641\\u064a \\u0627\\u0644\\u0625\\u0645\\u0627\\u0631\\u0627\\u062a \\u0644\\u0645 \\u062a\\u0641\\u0639\\u0644 \\u0634\\u064a\\u0626\\u0627 \\u0645\\u0627\\u0630\\u0627 \\u0641\\u0639\\u0644\\u062a \\u0643\\u0644 \\u0645\\u0627 \\u0642\\u0644\\u062a\\u0647 \\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0625\\u0630\\u0627 \\u062a\\u0639\\u0631\\u0636\\u062a \\u0645\\u0635\\u0627\\u0644\\u062d\\u0646\\u0627 \\u0644\\u0644\\u062e\\u0637\\u0631 \\u062e\\u0633\\u0627\\u0631\\u0629."}], "max_tokens": 500, "temperature": 0.3}' message='Post details'
+INFO 2025-07-03 16:58:38,797 basehttp "GET /ar/audio/check_status/14/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 16:58:40,264 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1561 request_id=req_386d40ade73025f857454486809e96b7 response_code=200
+INFO 2025-07-03 16:58:40,277 tasks Meeting 14 processing completed successfully.
+INFO 2025-07-03 16:58:43,812 basehttp "GET /ar/audio/check_status/14/ HTTP/1.1" 200 45
+INFO 2025-07-03 16:58:45,331 basehttp "GET /ar/audio/status/14/ HTTP/1.1" 200 6810
+INFO 2025-07-03 16:58:47,601 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 16:58:47,625 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:58:52,277 basehttp "GET /ar/admin/speaker_identification/speaker/10/change/ HTTP/1.1" 200 15180
+INFO 2025-07-03 16:58:52,300 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 16:58:58,413 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 16:58:58,440 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:00:22,697 basehttp "GET /ar/transcription/view/14/ HTTP/1.1" 200 13561
+INFO 2025-07-03 17:00:22,756 basehttp "GET /media/meeting_audio/F_sY27zsZ.mp3 HTTP/1.1" 200 480736
+WARNING 2025-07-03 17:00:27,147 log Not Found: /favicon.ico
+WARNING 2025-07-03 17:00:27,148 basehttp "GET /favicon.ico HTTP/1.1" 404 2509
+INFO 2025-07-03 17:01:44,522 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 17:01:46,466 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 17:03:36,836 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 17:03:38,482 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 17:03:47,929 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 17:04:00,726 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-03 17:04:00,727 tasks Processing meeting 15 with SPEAKER RECOGNITION
+INFO 2025-07-03 17:04:00,727 tasks Starting real processing with speaker recognition for meeting 15
+INFO 2025-07-03 17:04:00,728 tasks Converting and enhancing audio...
+INFO 2025-07-03 17:04:00,766 basehttp "GET /ar/audio/status/15/ HTTP/1.1" 200 12611
+INFO 2025-07-03 17:04:00,831 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:01,934 tasks Step 1: Speaker diarization and identification...
+INFO 2025-07-03 17:04:02,162 tasks Step 2: Transcribing with Whisper...
+DEBUG 2025-07-03 17:04:02,207 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 17:04:02,208 util api_version=None data="{'model': 'whisper-1', 'language': 'ar'}" message='Post details'
+INFO 2025-07-03 17:04:05,858 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 17:04:08,193 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=3336 request_id=req_02945f3583307cfd07b0466de1254731 response_code=200
+INFO 2025-07-03 17:04:08,193 tasks Step 3: Merging transcription with speaker identification...
+ERROR 2025-07-03 17:04:08,193 tasks Error in speaker recognition processing: 'speaker'
+INFO 2025-07-03 17:04:08,193 tasks Falling back to text-based speaker identification...
+INFO 2025-07-03 17:04:08,194 tasks Identifying speakers from text...
+ERROR 2025-07-03 17:04:08,195 tasks CRITICAL ERROR processing meeting 15: name 'transcript_data' is not defined
+INFO 2025-07-03 17:04:10,870 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:15,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:20,889 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:25,901 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:30,912 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:35,922 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:40,933 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:45,944 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:50,954 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:04:55,964 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:01,754 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:07,754 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:13,755 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:18,764 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:23,775 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:28,785 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:33,794 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:38,804 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:43,813 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:48,825 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:53,835 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:05:58,845 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:03,855 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:08,866 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:13,876 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:18,885 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:23,894 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:28,904 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:33,914 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:38,925 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:43,936 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:48,948 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:53,958 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:06:58,968 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:03,977 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:08,988 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:13,998 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:19,007 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:24,017 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:29,026 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:34,038 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:39,048 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:44,058 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:49,068 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:54,080 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:07:59,089 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:04,102 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:09,113 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:14,122 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:19,131 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:24,142 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:29,154 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:34,171 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:39,181 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:44,191 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:49,202 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:54,212 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:08:59,222 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:04,232 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:09,240 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:14,251 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:19,261 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:24,270 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:29,279 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:34,289 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:39,300 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:44,310 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:49,319 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:54,329 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:09:59,338 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:04,348 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:09,359 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:14,368 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:19,378 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:24,387 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:29,398 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:34,409 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:39,418 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:44,427 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:49,436 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:54,447 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:10:59,456 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:04,465 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:09,475 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:14,485 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:19,496 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:24,504 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:29,514 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:34,523 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:39,532 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:44,542 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:49,551 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:54,562 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:11:59,573 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:04,582 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:09,593 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:14,602 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:19,613 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:24,623 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:29,747 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:35,747 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:41,747 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:46,756 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:51,767 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:12:56,779 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:01,788 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:06,798 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:11,808 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:16,819 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:21,829 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:26,839 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:31,849 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:36,858 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:41,870 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:46,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:51,890 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:13:56,900 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:01,911 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:06,920 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:11,930 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:16,938 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:21,948 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:26,957 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:31,969 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:36,979 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:41,989 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:47,004 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:52,014 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:14:57,023 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:02,033 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:07,043 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:12,052 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:17,061 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:22,072 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:27,082 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:32,092 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:37,101 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:42,110 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:47,121 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:52,130 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:15:57,141 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:02,150 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:07,159 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:12,169 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:17,179 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:22,190 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:27,199 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:32,208 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:37,217 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:42,227 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:47,238 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:52,248 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:16:57,258 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:02,268 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:07,279 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:12,289 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:17,298 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:22,307 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:27,317 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:32,328 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:37,339 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:42,348 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:47,362 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:52,372 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:17:57,382 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:02,391 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:07,402 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:12,411 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:17,421 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:22,429 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:27,439 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:32,449 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:37,458 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:42,468 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:47,477 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:52,486 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:18:57,496 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:02,506 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:07,515 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:12,524 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:17,533 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:22,544 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:27,554 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:32,564 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:37,575 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:42,585 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:47,595 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:52,604 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:19:57,615 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:02,626 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:07,637 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:12,648 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:17,658 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:22,668 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:27,678 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:32,687 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:37,697 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:42,708 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:47,717 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:52,728 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:20:57,737 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:02,746 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:07,757 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:12,767 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:17,777 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:22,786 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:27,795 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:32,807 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:37,815 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:42,826 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:47,835 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:52,844 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:21:57,856 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:02,866 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:07,875 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:12,884 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:17,893 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:22,906 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:27,918 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:32,928 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:37,938 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:42,946 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:47,956 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:52,965 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:22:57,976 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:02,987 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:07,998 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:13,007 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:18,017 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:23,027 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:28,037 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:33,046 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:38,057 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:43,069 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:48,079 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:53,088 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:23:58,096 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:03,106 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:08,116 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:13,128 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:18,138 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:23,148 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:28,158 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:33,168 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:38,178 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:43,186 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:48,196 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:53,208 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:24:58,215 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:03,225 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:08,236 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:13,245 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:18,257 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:23,268 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:28,278 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:33,292 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:38,302 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:43,312 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:48,320 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:53,331 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:25:58,340 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:03,351 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:08,363 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:13,373 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:18,383 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:23,393 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:28,402 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:33,414 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:38,424 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:43,433 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:48,444 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:53,454 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:26:58,464 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:03,473 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:08,482 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:12,142 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 17:27:12,174 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:27:13,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:19,724 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:25,272 basehttp "GET /ar/admin/transcription/meetingreport/ HTTP/1.1" 200 16961
+INFO 2025-07-03 17:27:25,303 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:27:25,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:29,598 basehttp "GET /ar/admin/transcription/meetingreport/8/change/ HTTP/1.1" 200 15867
+INFO 2025-07-03 17:27:29,626 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:27:31,726 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:34,102 basehttp "GET /ar/admin/transcription/transcriptsegment/ HTTP/1.1" 200 59332
+INFO 2025-07-03 17:27:34,126 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:27:37,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:43,528 basehttp "GET /ar/admin/transcription/transcriptsegment/41/change/ HTTP/1.1" 200 20612
+INFO 2025-07-03 17:27:43,555 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:27:43,723 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:49,606 basehttp "GET /ar/admin/transcription/transcriptsegment/ HTTP/1.1" 200 59332
+INFO 2025-07-03 17:27:49,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:52,052 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 17:27:52,071 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:27:54,736 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:27:59,744 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:05,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:11,724 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:16,734 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:21,743 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:26,753 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:31,762 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:37,723 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:40,043 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 17:28:40,063 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:28:43,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:49,725 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:52,011 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 22964
+INFO 2025-07-03 17:28:52,035 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:28:55,724 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:28:59,492 basehttp "GET /ar/admin/transcription/meeting/15/change/ HTTP/1.1" 200 24861
+INFO 2025-07-03 17:28:59,509 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:29:01,723 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:03,971 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 22964
+INFO 2025-07-03 17:29:05,791 basehttp "GET /ar/admin/transcription/meeting/15/change/ HTTP/1.1" 200 24861
+INFO 2025-07-03 17:29:07,724 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:11,793 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 22964
+INFO 2025-07-03 17:29:13,723 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:18,734 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:23,743 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:28,753 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:33,761 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:35,315 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 17:29:37,259 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 17:29:48,782 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:53,792 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:29:59,540 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 17:29:59,578 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:29:59,722 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:04,364 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 22964
+INFO 2025-07-03 17:30:04,392 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:30:05,723 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:11,722 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:17,724 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:22,735 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:27,744 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:32,754 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:37,763 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:42,773 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:47,783 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:52,793 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:30:57,801 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:02,809 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:07,819 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:12,829 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:17,840 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:22,850 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:27,859 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:33,719 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:39,719 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:45,722 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:51,721 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:31:57,719 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:03,719 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:08,727 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:13,737 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:18,748 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:23,758 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:28,768 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:33,778 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:38,789 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:43,798 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:48,807 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:53,815 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:32:58,824 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:03,833 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:08,844 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:13,855 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:18,864 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:24,021 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:29,035 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:34,045 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:39,054 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:44,063 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:49,075 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:54,085 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:33:59,095 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:04,104 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:09,113 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:14,124 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:19,134 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:24,145 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:29,154 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:34,163 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:39,173 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:44,184 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:49,194 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:54,204 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:34:59,214 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:04,226 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:09,237 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:14,246 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:19,257 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:24,268 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:29,277 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:34,287 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:39,297 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:44,306 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:49,316 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:54,327 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:35:59,337 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:04,346 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:09,357 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:14,366 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:19,376 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:24,386 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:29,396 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:34,408 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:39,419 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:44,429 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:49,438 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:54,447 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:36:59,456 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:04,467 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:09,479 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:14,488 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:19,497 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:24,510 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:29,521 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:34,530 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:39,540 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:44,551 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:49,563 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:54,576 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:37:59,584 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:04,596 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:09,605 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:14,615 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:19,628 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:24,638 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:29,649 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:34,660 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:39,677 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:44,687 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:49,697 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:54,707 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:38:59,728 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:04,737 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:09,747 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:14,756 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:19,767 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:24,778 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:29,788 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:34,797 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:39,807 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:44,816 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:49,826 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:54,836 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:39:59,845 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:04,854 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:09,863 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:14,876 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:19,887 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:24,898 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:29,906 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:34,915 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:39,926 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:44,933 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:49,944 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:54,955 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:40:59,965 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:04,973 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:09,984 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:14,996 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:20,006 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:25,016 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:30,027 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:35,037 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:40,047 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:45,057 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:50,068 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:41:55,078 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:00,088 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:05,097 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:10,107 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:15,117 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:20,127 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:25,875 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:31,875 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:37,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:43,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:49,876 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:42:55,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:01,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:07,874 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:12,901 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:17,917 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:23,016 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:26,773 basehttp "GET /ar/audio/status/15/ HTTP/1.1" 200 12332
+INFO 2025-07-03 17:43:26,847 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:31,977 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:36,984 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:39,623 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 22964
+INFO 2025-07-03 17:43:39,649 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:43:42,676 basehttp "GET /ar/admin/speaker_identification/speaker/ HTTP/1.1" 200 19474
+INFO 2025-07-03 17:43:42,706 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:43:42,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:46,952 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 22964
+INFO 2025-07-03 17:43:46,967 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 17:43:48,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:54,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:43:59,892 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:04,902 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:10,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:16,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:22,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:28,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:33,890 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:39,876 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:45,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:51,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:44:57,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:02,887 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:07,896 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:13,897 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:19,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:25,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:31,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:37,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:43,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:49,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:45:55,898 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:01,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:07,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:13,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:19,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:25,885 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:31,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:37,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:43,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:49,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:46:55,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:01,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:07,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:13,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:19,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:25,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:31,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:37,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:43,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:49,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:47:55,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:01,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:07,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:12,892 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:18,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:24,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:30,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:36,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:42,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:48,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:48:54,884 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:00,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:06,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:12,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:18,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:24,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:30,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:36,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:42,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:48,878 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:54,880 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:49:59,891 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:04,901 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:09,909 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:15,877 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:21,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:27,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:33,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:39,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:45,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:51,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:50:57,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:03,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:09,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:15,879 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:21,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:27,884 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:33,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:39,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:45,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:51,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:51:57,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:03,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:09,898 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:15,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:21,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:27,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:33,002 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:38,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:44,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:50,886 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:52:56,884 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:02,885 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:08,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:14,883 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:20,884 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:26,881 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:32,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:38,882 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:44,884 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:50,890 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:53:56,414 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:54:01,426 basehttp "GET /ar/audio/check_status/15/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:54:24,688 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 17:54:37,214 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 17:54:51,675 basehttp "POST /ar/audio/upload/ HTTP/1.1" 302 0
+INFO 2025-07-03 17:54:51,676 tasks Processing meeting 16 with OpenAI
+INFO 2025-07-03 17:54:51,727 basehttp "GET /ar/audio/status/16/ HTTP/1.1" 200 12613
+DEBUG 2025-07-03 17:54:51,729 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/audio/transcriptions
+DEBUG 2025-07-03 17:54:51,729 util api_version=None data="{'model': 'whisper-1', 'language': 'ar', 'response_format': 'text'}" message='Post details'
+INFO 2025-07-03 17:54:51,804 basehttp "GET /ar/audio/check_status/16/ HTTP/1.1" 200 46
+INFO 2025-07-03 17:54:56,887 basehttp "GET /ar/audio/check_status/16/ HTTP/1.1" 200 46
+DEBUG 2025-07-03 17:54:59,839 util message='OpenAI API response' path=https://api.openai.com/v1/audio/transcriptions processing_ms=6383 request_id=req_1cd5c594919188d10fa72361b7afaee4 response_code=200
+DEBUG 2025-07-03 17:54:59,843 util message='Request to OpenAI API' method=post path=https://api.openai.com/v1/chat/completions
+DEBUG 2025-07-03 17:54:59,843 util api_version=None data='{"model": "gpt-3.5-turbo", "messages": [{"role": "system", "content": "\\u0623\\u0646\\u062a \\u062e\\u0628\\u064a\\u0631 \\u0641\\u064a \\u062a\\u062d\\u0644\\u064a\\u0644 \\u0645\\u062d\\u0627\\u0636\\u0631 \\u0627\\u0644\\u0627\\u062c\\u062a\\u0645\\u0627\\u0639\\u0627\\u062a"}, {"role": "user", "content": "\\n            \\u0644\\u062f\\u064a\\u0643 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u0642\\u0627\\u0626\\u0645\\u0629 \\u0645\\u0646 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b\\u064a\\u0646 \\u0627\\u0644\\u0645\\u062d\\u062a\\u0645\\u0644\\u064a\\u0646:\\n            - \\u0641\\u064a\\u0635\\u0644 \\u0627\\u0644\\u0642\\u0627\\u0633\\u0645 (\\u0645\\u062f\\u064a\\u0631)\\n- \\u062f. \\u0623\\u062d\\u0645\\u062f \\u0645\\u062d\\u0645\\u062f (\\u0631\\u0626\\u064a\\u0633 \\u0645\\u062c\\u0644\\u0633 \\u0627\\u0644\\u0625\\u062f\\u0627\\u0631\\u0629)\\n- \\u0645. \\u0641\\u0627\\u0637\\u0645\\u0629 \\u0639\\u0644\\u064a (\\u0627\\u0644\\u0645\\u062f\\u064a\\u0631 \\u0627\\u0644\\u062a\\u0646\\u0641\\u064a\\u0630\\u064a)\\n- \\u0623. \\u0633\\u0627\\u0631\\u0629 \\u062e\\u0627\\u0644\\u062f (\\u0627\\u0644\\u0645\\u062f\\u064a\\u0631 \\u0627\\u0644\\u0645\\u0627\\u0644\\u064a)\\n- \\u0623. \\u0645\\u062d\\u0645\\u062f \\u0627\\u0644\\u0639\\u0644\\u064a (\\u0645\\u062f\\u064a\\u0631 \\u0627\\u0644\\u0639\\u0645\\u0644\\u064a\\u0627\\u062a)\\n- \\u062f. \\u0646\\u0648\\u0631\\u0627 \\u062d\\u0633\\u0646 (\\u0639\\u0636\\u0648 \\u0645\\u062c\\u0644\\u0633 \\u0625\\u062f\\u0627\\u0631\\u0629)\\n- \\u0633\\u0627\\u0631\\u0629 \\u062e\\u0627\\u0644\\u062f \\u0627\\u0644\\u0645\\u062f\\u064a\\u0631 (\\u063a\\u064a\\u0631 \\u0645\\u062d\\u062f\\u062f)\\n- \\u0641\\u0627\\u0637\\u0645\\u0629 \\u0639\\u0644\\u064a \\u0627\\u0644\\u0645\\u062f\\u064a\\u0631 (\\u063a\\u064a\\u0631 \\u0645\\u062d\\u062f\\u062f)\\n- \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0642\\u0648\\u0645\\u062c\\u064a (\\u063a\\u064a\\u0631 \\u0645\\u062d\\u062f\\u062f)\\n- \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0648\\u0642\\u0648\\u0645\\u0629 (\\u063a\\u064a\\u0631 \\u0645\\u062d\\u062f\\u062f)\\n- \\u063a\\u064a\\u0631 \\u0645\\u0639\\u0631\\u0648\\u0641 (\\u063a\\u064a\\u0631 \\u0645\\u062d\\u062f\\u062f)\\n\\n            \\u0627\\u0644\\u0646\\u0635 \\u0627\\u0644\\u062a\\u0627\\u0644\\u064a \\u0645\\u0646 \\u0627\\u062c\\u062a\\u0645\\u0627\\u0639. \\u062d\\u062f\\u062f \\u0645\\u0646 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b:\\n            \\"\\u0645\\u0627\\u0630\\u0627 \\u062a\\u0633\\u062a\\u0637\\u064a\\u0639 \\u0647\\u0630\\u0647 \\u0627\\u0644\\u062f\\u0648\\u0644 \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 \\u0648\\u0627\\u0644\\u0625\\u0633\\u0644\\u0627\\u0645\\u064a\\u0629 \\u0627\\u0644\\u0645\\u063a\\u0644\\u0648\\u0628 \\u0639\\u0644\\u0649 \\u0623\\u0645\\u0631\\u0647\\u0627 \\u0648\\u0627\\u0644\\u062e\\u0644\\u064a\\u062c\\u064a\\u0629 \\u0623\\u0646 \\u062a\\u0641\\u0639\\u0644 \\u0644\\u0644\\u0633\\u0639\\u0648\\u062f\\u064a\\u0629\\u061f \\u0645\\u0627\\u0630\\u0627 \\u062a\\u0633\\u062a\\u0637\\u064a\\u0639 \\u0623\\u0646 \\u062a\\u0641\\u0639\\u0644 \\u0644\\u0647\\u0627\\u061f \\u0623\\u0646\\u062a \\u062a\\u0639\\u0644\\u0645 \\u0625\\u0630\\u0627 \\u0627\\u0644\\u0623\\u0645\\u0631\\u064a\\u0643\\u064a \\u062d\\u0627\\u0645\\u0644 \\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u063a\\u0636 \\u0627\\u0644\\u0646\\u0638\\u0631 \\u0623\\u0648 \\u063a\\u0636 \\u0627\\u0644\\u0637\\u0631\\u0641 \\u0639\\u0646 \\u0647\\u062c\\u0645\\u0627\\u062a \\u0627\\u0644\\u062d\\u0648\\u062b\\u064a\\u0629 \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0633\\u0639\\u0648\\u062f\\u064a\\u0629 \\u0648\\u063a\\u0636 \\u0627\\u0644\\u0637\\u0631\\u0641 \\u0639\\u0646\\u0647\\u0627 \\u0645\\u0627\\u0630\\u0627 \\u0641\\u0639\\u0644\\u062a \\u0623\\u0645\\u0631\\u064a\\u0643\\u0627 \\u0639\\u0646\\u062f\\u0645\\u0627 \\u0636\\u0631\\u0628\\u062a \\u0627\\u0644\\u0646\\u0627\\u0642\\u0644\\u0627\\u062a \\u0641\\u064a \\u0627\\u0644\\u0625\\u0645\\u0627\\u0631\\u0627\\u062a\\u061f \\u0644\\u0645 \\u062a\\u0641\\u0639\\u0644 \\u0634\\u064a\\u0626\\u0627\\u064b \\u0645\\u0627\\u0630\\u0627 \\u0641\\u0639\\u0644\\u062a \\u0643\\u0644 \\u0645\\u0627 \\u0642\\u0644\\u062a\\u0647 \\u0623\\u0645\\u0631\\u064a\\u0643\\u0627\\u061f \\u0625\\u0630\\u0627 \\u062a\\u0639\\u0631\\u0636\\u062a \\u0645\\u0635\\u0627\\u0644\\u062d\\u0646\\u0627 \\u0644\\u0644\\u062e\\u0637\\u0631\\n.\\"\\n\\n            \\u0627\\u0628\\u062d\\u062b \\u0639\\u0646:\\n            1. \\u0639\\u0628\\u0627\\u0631\\u0627\\u062a \\u062a\\u0639\\u0631\\u064a\\u0641 (\\u0623\\u0646\\u0627 \\u0641\\u0644\\u0627\\u0646\\u060c \\u0645\\u0639\\u0643\\u0645 \\u0641\\u0644\\u0627\\u0646)\\n            2. \\u0630\\u0643\\u0631 \\u0627\\u0644\\u0623\\u0633\\u0645\\u0627\\u0621 (\\u0634\\u0643\\u0631\\u0627\\u064b \\u062f\\u0643\\u062a\\u0648\\u0631 \\u0623\\u062d\\u0645\\u062f)\\n            3. \\u062a\\u063a\\u064a\\u064a\\u0631 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b (\\u0623\\u0639\\u0637\\u064a \\u0627\\u0644\\u0643\\u0644\\u0645\\u0629 \\u0644\\u0640)\\n\\n            \\u0623\\u062c\\u0628 \\u0641\\u0642\\u0637 \\u0628\\u0627\\u0633\\u0645 \\u0627\\u0644\\u0645\\u062a\\u062d\\u062f\\u062b \\u0623\\u0648 \\"\\u063a\\u064a\\u0631 \\u0645\\u062d\\u062f\\u062f\\" \\u0625\\u0630\\u0627 \\u0644\\u0645 \\u062a\\u0633\\u062a\\u0637\\u0639 \\u0627\\u0644\\u062a\\u062d\\u062f\\u064a\\u062f.\\n            "}], "max_tokens": 50, "temperature": 0.3}' message='Post details'
+DEBUG 2025-07-03 17:55:01,864 util message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=379 request_id=req_afa27fe1812c3af08ee780bce34c89ed response_code=200
+INFO 2025-07-03 17:55:02,885 basehttp "GET /ar/audio/check_status/16/ HTTP/1.1" 200 45
+INFO 2025-07-03 17:55:04,892 basehttp "GET /ar/audio/status/16/ HTTP/1.1" 200 6812
+INFO 2025-07-03 17:55:09,191 basehttp "GET /ar/transcription/view/16/ HTTP/1.1" 200 13565
+INFO 2025-07-03 17:55:09,250 basehttp "GET /media/meeting_audio/F_K8kZneZ.mp3 HTTP/1.1" 200 480736
+INFO 2025-07-03 17:55:31,849 basehttp "GET /ar/admin/transcription/meeting/ HTTP/1.1" 200 23618
+INFO 2025-07-03 17:55:31,874 basehttp "GET /ar/admin/jsi18n/ HTTP/1.1" 200 14011
+INFO 2025-07-03 18:43:02,780 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 18:43:05,133 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 18:43:23,512 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 18:43:23,891 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 18:43:50,484 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 18:43:50,935 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 18:44:28,509 autoreload /Users/mohammadhabahbeh/Desktop/My File/Project/board_meeting/board_meeting_project/audio_processing/tasks.py changed, reloading.
+INFO 2025-07-03 18:44:29,010 autoreload Watching for file changes with StatReloader
+INFO 2025-07-03 18:44:40,982 basehttp "GET /ar/audio/upload/ HTTP/1.1" 200 7673
+INFO 2025-07-03 18:44:41,013 basehttp "GET /static/css/rtl.css HTTP/1.1" 304 0
+INFO 2025-07-03 18:44:41,020 basehttp "GET /static/js/custom.js HTTP/1.1" 304 0
+INFO 2025-07-03 18:44:41,021 basehttp "GET /static/css/custom.css HTTP/1.1" 304 0

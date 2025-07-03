@@ -1,0 +1,164 @@
+<!-- templates/transcription/meeting_report.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    .report-section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        border-right: 4px solid #007bff;
+    }
+    .report-section h3 {
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+    .speaker-list {
+        list-style: none;
+        padding-right: 20px;
+    }
+    .speaker-list li {
+        padding: 5px 0;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .decision-item, .task-item {
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .decision-item {
+        border-right: 3px solid #28a745;
+    }
+    .task-item {
+        border-right: 3px solid #ffc107;
+    }
+    @media print {
+        .no-print {
+            display: none;
+        }
+        .report-section {
+            page-break-inside: avoid;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4 no-print">
+    <div class="col-md-8">
+        <h2>{{ meeting.title }} - {% trans "تقرير الاجتماع" %}</h2>
+        <p class="text-muted">{{ meeting.date }} | {% trans "تم إنشاؤه في" %}: {{ report.generated_at|date:"d/m/Y H:i" }}</p>
+    </div>
+    <div class="col-md-4 text-right">
+        <button class="btn btn-primary" onclick="window.print()">
+            <i class="fa fa-print"></i> {% trans "طباعة التقرير" %}
+        </button>
+        <a href="{% url 'transcription:view_meeting' meeting.id %}" class="btn btn-secondary">
+            <i class="fa fa-arrow-right"></i> {% trans "عودة" %}
+        </a>
+    </div>
+</div>
+
+{% if report %}
+    <!-- ملخص الاجتماع -->
+    <div class="report-section">
+        <h3><i class="fa fa-file-alt"></i> {% trans "ملخص الاجتماع" %}</h3>
+        <div class="content">
+            {{ report.summary|linebreaks }}
+        </div>
+    </div>
+
+    <!-- القرارات -->
+    <div class="report-section">
+        <h3><i class="fa fa-gavel"></i> {% trans "القرارات المتخذة" %}</h3>
+        {% if report.decisions %}
+            <div class="decisions-list">
+                {% for line in report.decisions.splitlines %}
+                    {% if line.strip %}
+                        <div class="decision-item">
+                            <i class="fa fa-check-circle text-success"></i> {{ line }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-muted">{% trans "لم يتم تسجيل أي قرارات في هذا الاجتماع." %}</p>
+        {% endif %}
+    </div>
+
+    <!-- المهام -->
+    <div class="report-section">
+        <h3><i class="fa fa-tasks"></i> {% trans "المهام والتكليفات" %}</h3>
+        {% if report.action_items %}
+            <div class="tasks-list">
+                {% for line in report.action_items.splitlines %}
+                    {% if line.strip %}
+                        <div class="task-item">
+                            <i class="fa fa-user-check text-warning"></i> {{ line }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-muted">{% trans "لم يتم تسجيل أي مهام في هذا الاجتماع." %}</p>
+        {% endif %}
+    </div>
+
+    <!-- معلومات إضافية -->
+    <div class="report-section no-print">
+        <h3><i class="fa fa-info-circle"></i> {% trans "معلومات إضافية" %}</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>{% trans "مدة الاجتماع" %}:</strong>
+                    {% with segments=meeting.segments.all %}
+                        {% if segments %}
+                            {{ segments.last.end_time|floatformat:0 }} {% trans "ثانية" %}
+                            ({{ segments.last.end_time|floatformat:0|divisibleby:60 }} {% trans "دقيقة" %})
+                        {% else %}
+                            {% trans "غير محدد" %}
+                        {% endif %}
+                    {% endwith %}
+                </p>
+                <p><strong>{% trans "عدد المشاركين" %}:</strong>
+                    {{ meeting.segments.values_list.speaker.distinct.count }} {% trans "متحدث" %}
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>{% trans "عدد المقاطع" %}:</strong>
+                    {{ meeting.segments.count }} {% trans "مقطع" %}
+                </p>
+                <p><strong>{% trans "حالة المعالجة" %}:</strong>
+                    {% if meeting.processed %}
+                        <span class="badge badge-success">{% trans "مكتمل" %}</span>
+                    {% else %}
+                        <span class="badge badge-warning">{% trans "قيد المعالجة" %}</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% else %}
+    <div class="alert alert-warning">
+        <i class="fa fa-exclamation-triangle"></i>
+        {% trans "لم يتم إنشاء تقرير لهذا الاجتماع بعد. يرجى الانتظار حتى اكتمال المعالجة." %}
+    </div>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // تحسين طباعة التقرير
+    window.addEventListener('beforeprint', function() {
+        document.body.classList.add('printing');
+    });
+
+    window.addEventListener('afterprint', function() {
+        document.body.classList.remove('printing');
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,118 @@
+<!-- templates/business_logic/decisions_list.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    .decision-card {
+        margin-bottom: 20px;
+        border-right: 4px solid #28a745;
+        transition: all 0.3s ease;
+    }
+    .decision-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .decision-header {
+        background-color: #f8f9fa;
+        padding: 10px 15px;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .decision-content {
+        padding: 15px;
+    }
+    .meeting-info {
+        font-size: 14px;
+        color: #6c757d;
+    }
+    .speaker-badge {
+        background-color: #007bff;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h2>{% trans "القرارات المتخذة" %}</h2>
+        <p class="text-muted">{% trans "جميع القرارات المستخرجة من الاجتماعات المعالجة" %}</p>
+    </div>
+    <div class="col-md-4 text-right">
+        <a href="{% url 'business_logic:tasks' %}" class="btn btn-outline-primary">
+            <i class="fa fa-tasks"></i> {% trans "عرض المهام" %}
+        </a>
+    </div>
+</div>
+
+{% if decisions %}
+    <div class="decisions-container">
+        {% for decision in decisions %}
+            <div class="card decision-card">
+                <div class="decision-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>{{ decision.meeting.title }}</strong>
+                            <span class="meeting-info">- {{ decision.meeting.date }}</span>
+                        </div>
+                        <div>
+                            <span class="speaker-badge">
+                                <i class="fa fa-user"></i> {{ decision.speaker.name|default:"غير معروف" }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="decision-content">
+                    <p class="mb-2">
+                        <i class="fa fa-gavel text-success"></i>
+                        {{ decision.text }}
+                    </p>
+                    <div class="mt-3 d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            <i class="fa fa-clock"></i>
+                            {% trans "الوقت في التسجيل" %}: {{ decision.start_time|floatformat:0 }}s
+                        </small>
+                        <a href="{% url 'transcription:view_meeting' decision.meeting.id %}#segment-{{ decision.id }}"
+                           class="btn btn-sm btn-outline-primary">
+                            <i class="fa fa-eye"></i> {% trans "عرض في السياق" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- ملخص القرارات -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">{% trans "ملخص القرارات" %}</h5>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="text-success">{{ decisions.count }}</h3>
+                    <p class="text-muted">{% trans "إجمالي القرارات" %}</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-primary">{{ decisions.values.meeting.distinct.count }}</h3>
+                    <p class="text-muted">{% trans "من الاجتماعات" %}</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-info">{{ decisions.values.speaker.distinct.count }}</h3>
+                    <p class="text-muted">{% trans "متحدث مختلف" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="alert alert-info text-center">
+        <i class="fa fa-info-circle fa-3x mb-3"></i>
+        <h4>{% trans "لا توجد قرارات مسجلة" %}</h4>
+        <p>{% trans "لم يتم استخراج أي قرارات من الاجتماعات المعالجة حتى الآن." %}</p>
+        <a href="{% url 'transcription:meetings' %}" class="btn btn-primary mt-3">
+            <i class="fa fa-list"></i> {% trans "عرض الاجتماعات" %}
+        </a>
+    </div>
+{% endif %}
+{% endblock %}
