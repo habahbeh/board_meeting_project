@@ -6,7 +6,9 @@ from django.contrib import messages
 from django.utils.translation import gettext as _
 from .forms import MeetingUploadForm
 from transcription.models import Meeting
-from .tasks import process_meeting_task
+# from .tasks import process_meeting_task
+from .tasks_enhanced import process_meeting_task
+
 from django.http import JsonResponse
 from django.conf import settings
 import threading

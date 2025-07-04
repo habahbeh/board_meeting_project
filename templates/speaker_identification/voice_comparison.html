@@ -1,0 +1,289 @@
+<!-- templates/speaker_identification/voice_comparison.html -->
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block extra_css %}
+<style>
+    .voice-card {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+    }
+    .speaker-item {
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        background: white;
+    }
+    .speaker-item.has-embedding {
+        border-left: 4px solid #28a745;
+    }
+    .speaker-item.no-embedding {
+        border-left: 4px solid #ffc107;
+    }
+    .process-btn {
+        margin-top: 20px;
+    }
+    .status-icon {
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2><i class="fa fa-microphone"></i> {% trans "نظام المقارنة الصوتية" %}</h2>
+        <p class="text-muted">{% trans "تحديد المتحدثين تلقائياً باستخدام البصمات الصوتية" %}</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <!-- حالة النظام -->
+    <div class="col-md-4">
+        <div class="voice-card">
+            <h4>{% trans "حالة النظام" %}</h4>
+            <hr>
+            <div class="mb-3">
+                <strong>Hugging Face Token:</strong>
+                {% if has_hf_token %}
+                    <span class="text-success"><i class="fa fa-check-circle"></i> متوفر</span>
+                {% else %}
+                    <span class="text-danger"><i class="fa fa-times-circle"></i> غير متوفر</span>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <strong>PyTorch:</strong>
+                {% if has_pytorch %}
+                    <span class="text-success"><i class="fa fa-check-circle"></i> مثبت</span>
+                    {% if cuda_available %}
+                        <span class="badge badge-info">GPU متاح</span>
+                    {% endif %}
+                {% else %}
+                    <span class="text-danger"><i class="fa fa-times-circle"></i> غير مثبت</span>
+                {% endif %}
+            </div>
+            <div>
+                <strong>pyannote.audio:</strong>
+                {% if has_pyannote %}
+                    <span class="text-success"><i class="fa fa-check-circle"></i> مثبت</span>
+                {% else %}
+                    <span class="text-danger"><i class="fa fa-times-circle"></i> غير مثبت</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- إحصائيات المتحدثين -->
+    <div class="col-md-8">
+        <div class="voice-card">
+            <h4>{% trans "المتحدثون" %}</h4>
+            <hr>
+            <div class="row text-center mb-3">
+                <div class="col-md-4">
+                    <h3 class="text-primary">{{ total_speakers }}</h3>
+                    <p>{% trans "إجمالي المتحدثين" %}</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-info">{{ speakers_with_audio }}</h3>
+                    <p>{% trans "لديهم ملفات صوتية" %}</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-success">{{ speakers_with_embeddings }}</h3>
+                    <p>{% trans "لديهم بصمات صوتية" %}</p>
+                </div>
+            </div>
+
+            {% if speakers %}
+                <h5>{% trans "قائمة المتحدثين" %}</h5>
+                <div style="max-height: 300px; overflow-y: auto;">
+                    {% for speaker in speakers %}
+                        <div class="speaker-item {% if speaker.voice_embedding %}has-embedding{% else %}no-embedding{% endif %}">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>{{ speaker.name }}</strong> - {{ speaker.position }}
+                                    {% if speaker.reference_audio %}
+                                        <br><small class="text-muted">
+                                            <i class="fa fa-file-audio"></i> {{ speaker.reference_audio.name|slice:"-30:" }}
+                                        </small>
+                                    {% endif %}
+                                </div>
+                                <div>
+                                    {% if speaker.voice_embedding %}
+                                        <span class="status-icon text-success" title="لديه بصمة صوتية">
+                                            <i class="fa fa-check-circle"></i>
+                                        </span>
+                                    {% elif speaker.reference_audio %}
+                                        <button class="btn btn-sm btn-primary process-embedding"
+                                                data-speaker-id="{{ speaker.id }}">
+                                            <i class="fa fa-fingerprint"></i> إنشاء بصمة
+                                        </button>
+                                    {% else %}
+                                        <span class="status-icon text-muted" title="لا يوجد ملف صوتي">
+                                            <i class="fa fa-microphone-slash"></i>
+                                        </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <div class="mt-3">
+                <button class="btn btn-success process-all-btn"
+                        {% if not speakers_needing_processing %}disabled{% endif %}>
+                    <i class="fa fa-cogs"></i> معالجة جميع البصمات المتبقية
+                </button>
+                <a href="{% url 'speaker_identification:add_speaker' %}" class="btn btn-primary">
+                    <i class="fa fa-plus"></i> إضافة متحدث
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- معالجة الاجتماعات -->
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="voice-card">
+            <h4>{% trans "معالجة الاجتماعات بالمقارنة الصوتية" %}</h4>
+            <hr>
+
+            {% if unprocessed_meetings %}
+                <div class="alert alert-info">
+                    <i class="fa fa-info-circle"></i>
+                    {% trans "يوجد" %} {{ unprocessed_meetings.count }} {% trans "اجتماع غير معالج" %}
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>{% trans "الاجتماع" %}</th>
+                                <th>{% trans "التاريخ" %}</th>
+                                <th>{% trans "الحجم" %}</th>
+                                <th>{% trans "الإجراء" %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for meeting in unprocessed_meetings|slice:":5" %}
+                                <tr>
+                                    <td>{{ meeting.title }}</td>
+                                    <td>{{ meeting.date }}</td>
+                                    <td>{{ meeting.audio_file.size|filesizeformat }}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary process-meeting"
+                                                data-meeting-id="{{ meeting.id }}">
+                                            <i class="fa fa-play"></i> معالجة بالصوت
+                                        </button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="alert alert-success">
+                    <i class="fa fa-check-circle"></i>
+                    {% trans "جميع الاجتماعات معالجة" %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- نافذة المعالجة -->
+<div class="modal fade" id="processingModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{% trans "جاري المعالجة" %}</h5>
+            </div>
+            <div class="modal-body text-center">
+                <div class="spinner-border text-primary mb-3" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <p id="processingMessage">{% trans "جاري المعالجة..." %}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    // معالجة بصمة متحدث واحد
+    $('.process-embedding').click(function() {
+        var speakerId = $(this).data('speaker-id');
+        var btn = $(this);
+
+        btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> معالجة...');
+
+        $.ajax({
+            url: "{% url 'speaker_identification:process_embedding' %}",
+            method: 'POST',
+            data: {
+                'speaker_id': speakerId,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            success: function(response) {
+                if (response.success) {
+                    btn.replaceWith('<span class="status-icon text-success"><i class="fa fa-check-circle"></i></span>');
+                    location.reload();
+                } else {
+                    alert('خطأ: ' + response.error);
+                    btn.prop('disabled', false).html('<i class="fa fa-fingerprint"></i> إنشاء بصمة');
+                }
+            },
+            error: function() {
+                alert('حدث خطأ أثناء المعالجة');
+                btn.prop('disabled', false).html('<i class="fa fa-fingerprint"></i> إنشاء بصمة');
+            }
+        });
+    });
+
+    // معالجة جميع البصمات
+    $('.process-all-btn').click(function() {
+        if (confirm('هل تريد معالجة جميع البصمات المتبقية؟')) {
+            $('#processingModal').modal('show');
+            $('#processingMessage').text('جاري معالجة البصمات الصوتية...');
+
+            $.ajax({
+                url: "{% url 'speaker_identification:process_all_embeddings' %}",
+                method: 'POST',
+                data: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                success: function(response) {
+                    $('#processingModal').modal('hide');
+                    alert('تمت معالجة ' + response.processed + ' بصمة صوتية');
+                    location.reload();
+                },
+                error: function() {
+                    $('#processingModal').modal('hide');
+                    alert('حدث خطأ أثناء المعالجة');
+                }
+            });
+        }
+    });
+
+    // معالجة اجتماع
+    $('.process-meeting').click(function() {
+        var meetingId = $(this).data('meeting-id');
+
+        if (confirm('هل تريد معالجة هذا الاجتماع بالمقارنة الصوتية؟')) {
+            $('#processingModal').modal('show');
+            $('#processingMessage').text('جاري معالجة الاجتماع...');
+
+            window.location.href = '/audio/process/' + meetingId + '/?voice=true';
+        }
+    });
+});
+</script>
+{% endblock %}

@@ -213,6 +213,9 @@ LOGGING = {
     },
 }
 
+# تفعيل المقارنة الصوتية
+USE_VOICE_COMPARISON = False
+
 TESTING_MODE = False
 # تقليل وقت المحاكاة إلى 5 ثوانٍ
 SIMULATION_DELAY = 5  # يمكن تعديله حسب الرغبة
